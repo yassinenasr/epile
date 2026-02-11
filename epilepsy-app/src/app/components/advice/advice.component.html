@@ -1,121 +1,102 @@
 <header class="py-20 bg-background-light dark:bg-background-dark text-center px-4">
-    <h1 class="text-4xl md:text-5xl font-bold text-primary dark:text-primary-light mb-4 text-center">Conseils et
-        Ressources</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary dark:text-primary-light mb-4 text-center">{{
+        'ADVICE_PAGE.TITLE' | translate }}</h1>
     <p class="max-w-2xl mx-auto text-slate-600 dark:text-slate-400 text-lg text-center">
-        Retrouvez des guides pratiques et des informations essentielles pour mieux vivre avec l'épilepsie au quotidien.
+        {{ 'ADVICE_PAGE.DESCRIPTION' | translate }}
     </p>
 </header>
 
 <section class="container mx-auto px-6 pb-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Card 1 -->
-        <div
-            class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all border-b-4 border-primary group">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let card of cards" (click)="openModal(card)"
+            class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all border-b-4 border-primary group cursor-pointer transform hover:-translate-y-1">
             <div
                 class="bg-primary/10 dark:bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <span class="material-icons text-primary text-3xl">medical_services</span>
+                <span class="material-icons text-primary text-3xl">{{ card.icon }}</span>
             </div>
-            <h3 class="text-xl font-bold mb-3">Premiers Secours</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">Savoir comment réagir lors d'une crise : gestes
-                essentiels et protocoles d'urgence.</p>
-            <a href="#" class="text-primary dark:text-primary-light font-bold inline-flex items-center group">
-                En savoir plus <span
+            <h3 class="text-xl font-bold mb-3">{{ 'ADVICE_PAGE.' + card.key + '_TITLE' | translate }}</h3>
+            <p class="text-slate-600 dark:text-slate-400 mb-6">{{ 'ADVICE_PAGE.' + card.key + '_DESC' | translate }}</p>
+            <span class="text-primary dark:text-primary-light font-bold inline-flex items-center group-hover:underline">
+                {{ 'ADVICE_PAGE.LEARN_MORE' | translate }}
+                <span
                     class="material-icons ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </a>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-            class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all border-b-4 border-primary group">
-            <div
-                class="bg-primary/10 dark:bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <span class="material-icons text-primary text-3xl">home</span>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Vie Quotidienne</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">Adapter son environnement, gérer le sommeil et
-                l'alimentation pour réduire les risques.</p>
-            <a href="#" class="text-primary dark:text-primary-light font-bold inline-flex items-center group">
-                En savoir plus <span
-                    class="material-icons ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </a>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-            class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all border-b-4 border-primary group">
-            <div
-                class="bg-primary/10 dark:bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <span class="material-icons text-primary text-3xl">medication</span>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Gestion du Traitement</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">Conseils pour l'observance thérapeutique et le suivi
-                médical régulier.</p>
-            <a href="#" class="text-primary dark:text-primary-light font-bold inline-flex items-center group">
-                En savoir plus <span
-                    class="material-icons ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </a>
-        </div>
-
-        <!-- Card 4 -->
-        <div
-            class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all border-b-4 border-primary group">
-            <div
-                class="bg-primary/10 dark:bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <span class="material-icons text-primary text-3xl">flight</span>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Voyages</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-6">Préparer ses déplacements : transport de médicaments,
-                certificats et décalage horaire.</p>
-            <a href="#" class="text-primary dark:text-primary-light font-bold inline-flex items-center group">
-                En savoir plus <span
-                    class="material-icons ml-1 text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-            </a>
+            </span>
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" (click)="closeModal()"></div>
+
+    <!-- Modal Content -->
+    <div
+        class="relative bg-white dark:bg-slate-800 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto animate-fadeIn">
+        <!-- Header -->
+        <div
+            class="p-6 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center sticky top-0 bg-white dark:bg-slate-800 z-10">
+            <h3 class="text-2xl font-bold text-primary dark:text-primary-light pr-8">
+                {{ 'ADVICE_PAGE.' + selectedCard.key + '_TITLE' | translate }}
+            </h3>
+            <button (click)="closeModal()"
+                class="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition-colors">
+                <span class="material-icons text-slate-500">close</span>
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="p-8">
+            <div class="flex flex-col gap-6 mb-6">
+                <!-- Video Section -->
+                <div *ngIf="selectedCard.videoIds?.length" class="grid gap-4 mb-4">
+                    <div *ngFor="let videoId of selectedCard.videoIds"
+                        class="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                        <iframe [src]="getSafeUrl(videoId)" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen class="w-full h-full"></iframe>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-full shrink-0">
+                        <span class="material-icons text-primary text-4xl">{{ selectedCard.icon }}</span>
+                    </div>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                        {{ 'ADVICE_PAGE.' + selectedCard.key + '_CONTENT' | translate }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+            class="p-6 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-700 flex justify-end">
+            <button (click)="closeModal()"
+                class="px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary-light transition-colors shadow-lg shadow-primary/20">
+                {{ 'BUTTONS.CLOSE' | translate }}
+            </button>
+        </div>
+    </div>
+</div>
 
 <!-- Featured Article -->
-<section class="bg-white dark:bg-slate-900/50 py-20 border-y border-slate-200 dark:border-slate-800">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 relative">
-                <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-full z-0"></div>
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3__MFS82U4NF5P7E28OTDeJsbVbM0CsMRwSeSipI6EZ80g3cV6_sJ2mdTzrwl2gwj4Ub_bdtalmoRwoIGfRkntKlbsfMU-COUHBnQ8L0KhCWaYt1MGqllGsITfmvw1HXLfWkhGoB1n4039rxTiQotQAvARq3vd80t2f8085AUYBqU-uiuPgAACkeuaRnUNtTASNBPwVWpzN_qeyXd5wsxIz8f6BLzHoeCRb1KF4ewJ0H-0j9Z_ZYES3WGDcpRwY-uNjH5C91sEbGY"
-                    alt="Médecin expliquant un examen neurologique"
-                    class="rounded-xl shadow-2xl relative z-10 w-full object-cover h-[400px]">
-                <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full z-0"></div>
-            </div>
-            <div class="w-full md:w-1/2 space-y-6">
-                <span
-                    class="inline-block px-4 py-1 bg-primary/10 text-primary dark:text-primary-light font-bold text-xs uppercase tracking-widest rounded-full">Article
-                    du Mois</span>
-                <h2 class="text-3xl md:text-4xl font-bold">Comprendre les avancées de la recherche en 2024</h2>
-                <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                    La recherche sur l'épilepsie progresse rapidement. Découvrez les nouvelles options de traitement,
-                    les dispositifs de détection innovants et comment ces avancées transforment le quotidien des
-                    patients. Une analyse approfondie par nos experts.
-                </p>
-                <button
-                    class="bg-primary text-white hover:bg-opacity-90 px-8 py-3 rounded-md font-bold transition-all shadow-lg hover:shadow-primary/20 uppercase tracking-wide">
-                    Lire la Suite
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Newsletter -->
 <section class="hero-pattern py-24 text-white text-center">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 uppercase tracking-widest">Recevoir toutes les mises à jour....
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 uppercase tracking-widest">{{ 'ADVICE_PAGE.NEWSLETTER_TITLE'
+            |
+            translate }}
         </h2>
         <div
             class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 bg-white/10 p-2 rounded-full border border-white/30">
-            <input type="email" placeholder="VOTRE EMAIL"
+            <input type="email" placeholder="{{ 'ADVICE_PAGE.NEWSLETTER_PLACEHOLDER' | translate }}"
                 class="bg-transparent border-none focus:ring-0 flex-grow px-8 py-4 text-white placeholder-white/70 w-full rounded-full">
             <button
                 class="bg-primary hover:bg-primary-light text-white px-12 py-4 rounded-full font-bold uppercase tracking-wider transition-all w-full md:w-auto">
-                S'abonner
+                {{ 'ADVICE_PAGE.SUBSCRIBE' | translate }}
             </button>
         </div>
     </div>

@@ -35,9 +35,12 @@
                     </div>
                 </div>
 
-                <a href="#"
-                    class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-xs font-bold">Se
-                    Connecter</a>
+                <a routerLink="/signup"
+                    class="bg-white text-primary px-4 py-2 rounded-full hover:bg-slate-100 transition-colors text-xs font-bold shadow-sm">{{
+                    'HEADER.SIGNUP' | translate }}</a>
+                <a routerLink="/login"
+                    class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-xs font-bold">{{
+                    'HEADER.LOGIN' | translate }}</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -76,9 +79,12 @@
                 </div>
             </div>
 
-            <a href="#" (click)="isMenuOpen=false"
-                class="block w-full text-left px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-purple-200">Se
-                Connecter</a>
+            <a routerLink="/signup" (click)="isMenuOpen=false"
+                class="block w-full text-left px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-purple-200">{{
+                'HEADER.SIGNUP' | translate }}</a>
+            <a routerLink="/login" (click)="isMenuOpen=false"
+                class="block w-full text-left px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-purple-200">{{
+                'HEADER.LOGIN' | translate }}</a>
         </div>
     </div>
 </nav>
