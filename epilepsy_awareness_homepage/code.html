@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Soigner tôt L'Épilepsie | Association de Sensibilisation</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6d4c7d", // The signature purple from the screenshots
+              "background-light": "#f8f9fa",
+              "background-dark": "#0f172a",
+            },
+            fontFamily: {
+              display: ["Montserrat", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .hero-bg {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .dark .hero-bg {
+            background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), url('https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=2000');
+        }
+        .expert-card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-sans antialiased">
+<nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">neurology</span>
+<span class="font-display font-bold tracking-tight">EPI-AWARE</span>
+</div>
+<div class="hidden md:flex space-x-8 font-display text-sm font-semibold uppercase tracking-wider">
+<a class="hover:text-purple-200 transition-colors" href="#">Home</a>
+<a class="hover:text-purple-200 transition-colors" href="#propos">A Propos</a>
+<a class="hover:text-purple-200 transition-colors" href="#">Questionnaire</a>
+<a class="hover:text-purple-200 transition-colors" href="#">Contact</a>
+<a class="bg-white/10 px-4 py-1 rounded-full hover:bg-white/20 transition-colors" href="#">Se Connecter</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<section class="hero-bg relative min-h-[80vh] flex items-center overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10 text-center md:text-left">
+<h1 class="font-display text-5xl md:text-7xl font-extrabold text-primary dark:text-purple-300 leading-tight mb-6">
+                    Soigner tôt<br/>L'Épilepsie
+                </h1>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">En savoir plus</button>
+<button class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">À propos</button>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<img alt="Purple 3D Brain visualization" class="w-full max-w-lg drop-shadow-2xl animate-pulse duration-[3000ms] rounded-full mix-blend-multiply dark:mix-blend-normal opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7J47sQS5iD0AsvEufxGswL-kn-BgmPaH8grqfpdZ6RcB23Q7a3TN6SXd5BHm9UZ-U1dbBuMn0SRQHFDi0RTDqv-VxSk-35LA-QVwVg0UmFQWi4CNssuqGlIy_GuOiN1sZhAgvhQ6SVKFic4orfAofl8qJlaUI8b5jwBkwXkKQm4L7I9YUk6vmK9xKFrNXedyPGzoaOkt-dQ0gU9OHxmheUVg0VIhx7ZCdK4clOfhnQsVxC1PZ68wxzyeJ7LXdlXFVaPaUVdBz2zP"/>
+<div class="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 cursor-pointer hover:bg-primary/40 transition-all">
+<span class="material-symbols-outlined text-white">chevron_left</span>
+</div>
+<div class="absolute -right-12 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 cursor-pointer hover:bg-primary/40 transition-all">
+<span class="material-symbols-outlined text-white">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20" id="propos">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-16 shadow-xl mb-16 flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-3/5">
+<h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-tight">À Propos de l'Épileptologie</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-lg">
+                        L'épileptologie est la branche de la neurologie qui se consacre au diagnostic et au traitement de l'épilepsie. Elle explore les mystères du cerveau pour offrir une vie meilleure aux patients.
+                    </p>
+<button class="bg-primary text-white px-8 py-3 rounded font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">En savoir plus</button>
+</div>
+<div class="md:w-2/5">
+<img alt="Brain neural network" class="w-full rounded-2xl shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg-A_uFfpAfgROjlWLVSaD1GdS0_DqZL2ZeVDR_abFI4uDjTI1G2Aafa-PiWmLzCgRI3f_fdyKuyS_A12oeB9YTCT99rM_n76aDQGMw8c5UTrayh9d00Od6_Sf6xj3GAVhuQMrtR7eX5jYkYBwfbi5KHoxIS3_vEvvrRjqLaFRzA5323dtR6mIVmVzoqsE9loI7ApqUGfgbazjjU7qBPFlJ9a7NfX5161TvL_thh6krettiFC2gT4bVh7abRCo1VjFVpWYMdDf2wZQ"/>
+</div>
+</div>
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 pt-12">
+<div class="md:w-1/2">
+<h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Qu'est-ce que l'Épilepsie ?</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-lg">
+                        L'épilepsie est une affection neurologique caractérisée par des décharges électriques excessives dans les cellules cérébrales. Elle peut toucher n'importe qui, à tout âge.
+                    </p>
+<div class="space-y-4 mb-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Crises imprévisibles et répétées</span>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Troubles de l'humeur et fatigue</span>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300">Impact sur la mémoire et l'attention</span>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">En savoir plus</button>
+</div>
+<div class="md:w-1/2">
+<div class="relative bg-white dark:bg-slate-800 p-8 rounded-full shadow-inner aspect-square flex items-center justify-center">
+<img alt="Human health illustration" class="w-3/4 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNIF_cJfscZLgxUDUoIn-CSubGJ18maajFUHm7VoBHp_RsKaM6H5vJWUVY0NZMC3k_o1f0dBygqB8aVeWPfOrlvVOwAcKfyIQMbcF6Q1SmpdHVvjmwq-qPRHRLo5BDvORL08HwRNc8GJvTsf_H23S-AT8Z2kMc-AAndCV9zQzSDKNkPh75u-rbD5yOEXshPVIJIkZK8L0RPEWt7USLJWcMjokxGna9ua-6IgNPrtTw7yx0zCWidcX0CqUfF1Tu3N-LpwOzndAWd7PJ"/>
+<div class="absolute top-4 right-1/4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">CRISES</div>
+<div class="absolute bottom-1/4 -left-4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">TROUBLES DE L'HUMEUR</div>
+<div class="absolute bottom-12 right-0 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">MÉMOIRE</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-16 uppercase tracking-widest">Paroles d'Experts..</h2>
+<div class="grid md:grid-cols-2 gap-12 items-end">
+<div class="bg-white dark:bg-slate-800 p-8 pt-0 rounded-3xl expert-card-shadow relative mt-20">
+<div class="w-32 h-32 mx-auto -mt-16 mb-6 rounded-full border-4 border-white dark:border-slate-800 overflow-hidden shadow-xl">
+<img alt="Dr. Jerome Engel Jr" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLmq_SYao8-VBtC1OxtJVKavplIK_MCRDXSB8ft0NKJ1DRkddLeGoWK7r0zL-HbLmysfttYCtRGrOSDCUW5Az3kE9Fu7oECV-we_3VsAe4epJnFtvBcITV1LHdV8luRK0JR9jKb8S1smGvbC9_s0f7BQf1OIn4V9jPWnvxmJio2E6Ixd9MGbzKtDM0oo5omzkFtSF3KE-XfJ_niCVhWSL_W9CJA0cXdmZk4EBH4sBNq1eQwBto7sW9KMtibgcEqe5ADo_mQwQTufP_"/>
+</div>
+<h3 class="font-display font-bold text-xl mb-4">DR. JEROME ENGEL JR</h3>
+<p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
+                        "La chirurgie est sous-utilisée en épilepsie, alors qu'elle offre la meilleure chance de liberté de crises chez les patients résistants aux traitements médicamenteux."
+                    </p>
+<span class="material-symbols-outlined text-4xl text-primary opacity-30">format_quote</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-12 pt-0 rounded-3xl expert-card-shadow relative mt-20 md:scale-105">
+<div class="w-48 h-48 mx-auto -mt-24 mb-6 rounded-full border-4 border-white dark:border-slate-800 overflow-hidden shadow-2xl">
+<img alt="Dr. Jacqueline A. French" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMVN7GRyLa8wYoqt7dQ7P1zK1cTbwVKzwu63IhqPhQDrby47kGL-ooBGriJM3FC6fnaRIVnn6PtyrrcYmCVL4tzD4VMtmBNtlUAH4OIVH_69lnB6U-ziAo-DFUDyUYZJudwTbiMNELQEfhD2AgUhe4oWqH07oKcx1pdL2TnHZn8bupuNXXklXEZpcK5T_bmM0IobLeh0Ri3tiVV54bornrtFuqJ4xYZfCO9LNtnca2jfC61AXjY_u6WvWcuijFe3P8sNYcS_rxfik-"/>
+</div>
+<h3 class="font-display font-bold text-2xl mb-6">DR. JACQUELINE A. FRENCH</h3>
+<p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed text-lg">
+                        "L'épilepsie ne se limite pas aux crises : elle affecte tous les aspects de la vie du patient. Les traitements doivent viser la qualité de vie, pas seulement le contrôle des crises."
+                    </p>
+<span class="material-symbols-outlined text-5xl text-primary opacity-30">format_quote</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-2 uppercase tracking-widest">Cas de Recherche</h2>
+<p class="text-slate-500 mb-16">Découvrez les dernières avancées cliniques et les études de cas sur les différents types de crises épileptiques.</p>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
+<div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
+<img alt="Microscopic brain image" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJ7skfRsHVCvXAhjwJuPykjl5rsIxho6GT8NQ9O9csvFwH69FotJUErNQqnYdihGi3FyGB1eHny9h5xaLnVLQr_HBlsA435_pTQxE9Javd6H0qMdesvMMQkDXTS9WeOySY0QBo2ZFV2G43KxZ_oqh1qZwIG0O0Ln6ILovMeH092Y_c0fg14Q8i4x5y-5Cy7RbkTW0Oys7vRNEoGqD3O2snBhk5lRe_RgE7e7fJOLk6J_Q6ulKoxQbeSV77KNgjTTPt7Gnzn45sUR9"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la suite</button>
+</div>
+</div>
+<h3 class="font-display font-bold text-xl mb-3">Cas 01 : Épilepsie du Lobe Temporal</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Localiser pour mieux guérir." Ce cas illustre comment l'imagerie de pointe permet d'identifier une sclérose de l'hippocampe.</p>
+<div class="w-full flex justify-center">
+<div class="w-8 h-8 rotate-45 bg-primary/10"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
+<div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
+<img alt="Medical professional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklwJt8IQjk26hSq-DgvHFvB8uNb72ZWZQgHDRVcLDcgRsB4-M_y2Q1nSWfbP5lysMbvLoVBw1bSD6zrjvwpiUiLAZkYGB_K0Z4FLbbQaP0wiETY3AaAuipytgpeGdh9oQsx2s-CdL52hQB5_pg4lWjDFsevBWjyn-13xU50qqaQIa45DR-HzFp3FCWpKAyh7ICvwevwMeH2AQvRVN5XMNdKW6y0Rebs8zJhwVVhg4wyietm1Tesalt13arL6NIt11FC7jMtushXbJ"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la suite</button>
+</div>
+</div>
+<h3 class="font-display font-bold text-xl mb-3">Cas 02 : Épilepsie Myoclonique Juvénile</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Comprendre les déclencheurs au quotidien." Focus sur les crises du réveil chez l'adolescent et la gestion du sommeil.</p>
+<div class="w-full flex justify-center">
+<div class="w-8 h-8 rotate-45 bg-primary/10"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
+<div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
+<img alt="Pediatric research" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC--ILuYqpEFMl9XT3g6cqky1mnyJ1en3aKoH5k_0nt6arXe0mgOt58u3a5CyksCHfHWRZls4XSv6yQhpN2RhluxSIKoCANI6xxg8oJQsVRyVatJCdppV09HEM8XM0kkzIUq5BrnHAwWUnu8vvXaiOHF05AbsDj73MfklzQ2DCmOSxcayA2kRpYLtc1G_H7RPGj0ZBfaWB3rYR1PPJLF_GWbK1i1e8yZrVGtPFnl48jXg90jb_phsm1CJlkLjw6hMDk5nloEuhH7zL5"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la suite</button>
+</div>
+</div>
+<h3 class="font-display font-bold text-xl mb-3">Cas 03 : Épilepsie Absence (Pédiatrie)</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Au-delà des apparences de l'inattention." Analyse des ruptures de contact brèves chez l'enfant et diagnostic EEG.</p>
+<div class="w-full flex justify-center">
+<div class="w-8 h-8 rotate-45 bg-primary/10"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative bg-primary py-24 overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkXOM2pVrNMqpE_aqgb-EsXQmH-2VoHYyImMRTnA-Q2La76kff1AFCOnkg6RxTDCIdGpv9AxnZkPtns8brKwbaen8E4tSqmac9Wt5sTfkGAbHeC5oSQMT2kOBxdUPZcIgDlddVCrNbvJTcH-98J6wkYVLGJ3LHayZfKW8a6G0FZv5S9Y89N3xKsEs2Moxkcwn2CrM8kIiGa18fSz72WQOFbc3lkPNl4ooQdseMgrcMcylDA6LJp8Thsi5iKsWBb5fEspIwrfGqvGlW');"></div>
+<img alt="Abstract brain background" class="w-full h-full object-cover mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVxMD5Zy7cqxqXoHW2q3s9q79mZdiZDc_B-oWE8ryPWkweMdzcm67gm_cGU8M8D1smw0Iajl8q7QQwJo0B_WDkcUPYkp5VaZclAlOB192LMEhbAhPbcFPlFxmhx7ITq07pkF97y_LlbBNBvdf64haP8fKv1QL3LNb5qMBmgBn7Jp_a8iyUmRX8NvuF3AGLdWQYP4YCdOiniOu9GnW17pu_Xvr9KOGht7kwGolW-txMTI6_nuVhQxFJefxcrQMfT7QKgFS_YmCQ_Shh"/>
+</div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+<h2 class="font-display text-4xl font-extrabold text-white mb-12 uppercase tracking-widest">Recevoir toutes les mises à jour....</h2>
+<div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+<input class="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white rounded-lg px-6 py-4" placeholder="VOTRE EMAIL" type="email"/>
+<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">S'abonner</button>
+</div>
+</div>
+</section>
+<footer class="bg-slate-900 text-slate-400 pt-20 pb-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-16 mb-16">
+<div>
+<h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">Ressources</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-white transition-colors" href="#">Accueil</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Ce que nous faisons</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Médias</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Conseils de voyage</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Protection</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Assistance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">À Propos</h4>
+<p class="text-sm leading-relaxed">
+                        L'Association Tunisienne pour le Développement de l'Épileptologie œuvre à l'amélioration de la prise en charge des personnes atteintes d'épilepsie. Elle s'engage dans la sensibilisation, la formation, la recherche et le soutien aux patients et à leurs familles.
+                    </p>
+</div>
+<div>
+<h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">Contactez-nous</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-sm">Faire de ceci la première véritable</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-sm">Appel : +216 1234567890</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-sm">Email : ATDEgmail.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-10 text-center text-xs">
+<p>© 2026 Tous droits réservés. Conçu par Microsoft Tech Club ENET'Com</p>
+</div>
+</div>
+</footer>
+
+</body></html>

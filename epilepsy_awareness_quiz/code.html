@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Epilepsy Awareness Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6B4E84",
+              "background-light": "#F8F9FA",
+              "background-dark": "#1A1625",
+            },
+            fontFamily: {
+              display: ["Montserrat", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>body {
+    font-family: "Montserrat", sans-serif
+    }
+.brain-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCEF2F5-6ZGguFzLuLSYow-JiSPFQn6zf07P8Xldgrlp0jUr9ko-HU0boTR1b6S3HbFTJyLhI2o9ux1ikp7fD_NFON821caqd__Z_A-QGtT8eaHk2ZqnhvjsBwL_wLCNMhjdcAvAhvt1PUlt-yeJcxdEhzn-TyUuM70FNT8vF7E6zR8KhisdsJUX-dUGxjTZuwyKnP2cilnsN4xzWbJfGqwxxRSsmBrGnZH_5F-K6jWkxb06RcSKYQXqunlnnLOwJxkAvGISPebzEjp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+    }
+.option-card:hover {
+    transform: translatey(-2px);
+    transition: all 0.2s ease
+    }
+.progress-bar {
+    transition: width 0.5s ease-in-out
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen">
+<nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex-shrink-0 flex items-center gap-2">
+<span class="material-icons text-3xl">psychology</span>
+<span class="font-extrabold text-xl tracking-tighter">EPI-CARE</span>
+</div>
+<div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+<a class="hover:text-purple-200 transition-colors" href="#">HOME</a>
+<a class="hover:text-purple-200 transition-colors" href="#">A PROPOS</a>
+<a class="border-b-2 border-white pb-1" href="#">QUESTIONNAIRE</a>
+<a class="hover:text-purple-200 transition-colors" href="#">CONTACT</a>
+<a class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-all" href="#">SE CONNECTER</a>
+</div>
+<div class="md:hidden">
+<span class="material-icons">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<div class="relative py-12 brain-bg overflow-hidden">
+<div class="absolute inset-0 bg-white/80 dark:bg-background-dark/85 backdrop-blur-sm"></div>
+<div class="relative max-w-4xl mx-auto px-4 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-primary mb-4">Quiz de Sensibilisation</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400">Testez vos connaissances et apprenez les bons gestes pour sauver des vies.</p>
+</div>
+</div>
+<main class="max-w-4xl mx-auto px-4 -mt-10 pb-20 relative z-10">
+<div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-6 border-b border-slate-100 dark:border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold text-primary tracking-wider uppercase">Question 3 sur 10</span>
+<span class="text-sm font-semibold text-slate-500">30% complété</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 30%"></div>
+</div>
+</div>
+<div class="p-8 md:p-12">
+<div class="mb-10">
+<h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900 dark:text-white">
+                        Quels sont les premiers secours lors d'une crise tonico-clonique ?
+                    </h2>
+</div>
+<div class="grid gap-4 mb-12">
+<button class="option-card group flex items-center p-5 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-left bg-white dark:bg-slate-800 transition-all">
+<span class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:bg-primary group-hover:border-primary flex items-center justify-center font-bold text-slate-400 group-hover:text-white mr-4 transition-colors">A</span>
+<span class="text-lg font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary">Mettre un objet dans la bouche pour éviter de se mordre la langue.</span>
+</button>
+<button class="option-card group flex items-center p-5 rounded-xl border-2 border-primary bg-purple-50 dark:bg-primary/10 text-left transition-all">
+<span class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold text-white mr-4">B</span>
+<span class="text-lg font-semibold text-primary">Protéger la tête, noter l'heure et mettre la personne en PLS après la crise.</span>
+<span class="material-icons ml-auto text-primary">check_circle</span>
+</button>
+<button class="option-card group flex items-center p-5 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-left bg-white dark:bg-slate-800 transition-all">
+<span class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:bg-primary group-hover:border-primary flex items-center justify-center font-bold text-slate-400 group-hover:text-white mr-4 transition-colors">C</span>
+<span class="text-lg font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary">Maintenir fermement la personne pour arrêter les secousses.</span>
+</button>
+<button class="option-card group flex items-center p-5 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-left bg-white dark:bg-slate-800 transition-all">
+<span class="flex-shrink-0 w-10 h-10 rounded-full border-2 border-slate-200 dark:border-slate-700 group-hover:bg-primary group-hover:border-primary flex items-center justify-center font-bold text-slate-400 group-hover:text-white mr-4 transition-colors">D</span>
+<span class="text-lg font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary">Lui donner un verre d'eau immédiatement pendant la crise.</span>
+</button>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+<button class="flex items-center gap-2 text-slate-500 hover:text-primary font-semibold transition-colors">
+<span class="material-icons">arrow_back</span>
+                        Précédent
+                    </button>
+<button class="w-full sm:w-auto bg-primary hover:bg-purple-800 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                        Suivant
+                        <span class="material-icons">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-purple-100 dark:bg-primary/5 p-6 rounded-2xl border border-purple-200 dark:border-primary/20 flex gap-4">
+<span class="material-icons text-primary text-3xl">lightbulb</span>
+<div>
+<h4 class="font-bold text-primary mb-1">Le saviez-vous ?</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Il ne faut jamais rien mettre dans la bouche d'une personne en crise. C'est un mythe dangereux qui peut causer des blessures dentaires ou obstruer les voies respiratoires.
+                </p>
+</div>
+</div>
+</main>
+<footer class="bg-primary text-white pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div>
+<h3 class="font-bold text-xl mb-6 tracking-wider uppercase">Ressources</h3>
+<ul class="space-y-4 text-slate-200 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Accueil</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Ce que nous faisons</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Médias</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Conseils de voyage</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Assistance</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-6 tracking-wider uppercase">À Propos</h3>
+<p class="text-slate-200 text-sm leading-relaxed">
+                        L'Association Tunisienne pour le Développement de l'Épileptologie œuvre à l'amélioration de la prise en charge des personnes atteintes d'épilepsie à travers la formation et la sensibilisation.
+                    </p>
+</div>
+<div>
+<h3 class="font-bold text-xl mb-6 tracking-wider uppercase">Contactez-nous</h3>
+<ul class="space-y-4 text-slate-200 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-icons text-purple-300">location_on</span>
+                            Tunis, Tunisie
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-purple-300">call</span>
+                            Appel : +216 1234567890
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-icons text-purple-300">email</span>
+                            Email : ATDEgmail.com
+                        </li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 text-center text-sm text-slate-300">
+<p>© 2024 Tous droits réservés. Conçu par Microsoft Tech Club ENET'Com</p>
+</div>
+</div>
+</footer>
+
+</body></html>

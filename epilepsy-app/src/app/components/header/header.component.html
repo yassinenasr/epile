@@ -1,0 +1,50 @@
+<nav class="bg-primary text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" routerLink="/">
+                <span class="material-symbols-outlined text-3xl">neurology</span>
+                <span class="font-display font-bold tracking-tight text-xl">EPI-AWARE</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div
+                class="hidden md:flex space-x-8 font-display text-sm font-semibold uppercase tracking-wider items-center">
+                <a routerLink="/" routerLinkActive="text-purple-200" [routerLinkActiveOptions]="{exact: true}"
+                    class="hover:text-purple-200 transition-colors">Home</a>
+                <a routerLink="/advice" routerLinkActive="text-purple-200"
+                    class="hover:text-purple-200 transition-colors">Advice & Resources</a>
+                <a routerLink="/quiz" routerLinkActive="text-purple-200"
+                    class="hover:text-purple-200 transition-colors">Quiz</a>
+                <a href="#" class="hover:text-purple-200 transition-colors">Contact</a>
+                <a href="#"
+                    class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-xs font-bold">Se
+                    Connecter</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button (click)="toggleMenu()" class="focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">{{ isMenuOpen ? 'close' : 'menu' }}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div *ngIf="isMenuOpen" class="md:hidden bg-primary border-t border-white/10">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-display uppercase tracking-wider text-sm font-semibold">
+            <a routerLink="/" (click)="isMenuOpen=false"
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Home</a>
+            <a routerLink="/advice" (click)="isMenuOpen=false"
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Advice & Resources</a>
+            <a routerLink="/quiz" (click)="isMenuOpen=false"
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Quiz</a>
+            <a href="#" (click)="isMenuOpen=false"
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Contact</a>
+            <a href="#" (click)="isMenuOpen=false"
+                class="block w-full text-left px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-purple-200">Se
+                Connecter</a>
+        </div>
+    </div>
+</nav>
