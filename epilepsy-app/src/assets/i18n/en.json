@@ -101,5 +101,68 @@
         "CASE_3_DESC": "\"Beyond the appearance of inattention.\" Analysis of brief contact breaks in children and EEG diagnosis.",
         "NEWSLETTER_TITLE": "Receive all updates...",
         "NEWSLETTER_PLACEHOLDER": "YOUR EMAIL"
+    },
+    "DASHBOARD": {
+        "TITLE": "My Dashboard",
+        "SUBTITLE": "Track your progress and manage your health with detailed statistics on your seizures, sleep, and treatment.",
+        "SEIZURE_FREE_DAYS": "Seizure-Free Days",
+        "GOAL": "Goal: 60 days",
+        "MEDICATION": "Medication Intake",
+        "THIS_WEEK": "This Week",
+        "MISSED_DOSE": "1 missed dose detected this week",
+        "SLEEP_QUALITY": "Sleep Quality",
+        "HOURS_PER_NIGHT": "hours / night",
+        "WEEKLY_AVG": "Stable weekly average",
+        "SEIZURE_FREQUENCY": "Seizure Frequency (2025)",
+        "LAST_6_MONTHS": "Last 6 months",
+        "THIS_YEAR": "This year",
+        "VIEW_REPORT": "View Full Report",
+        "MONTHS": {
+            "JAN": "Jan",
+            "FEB": "Feb",
+            "MAR": "Mar",
+            "APR": "Apr",
+            "MAY": "May",
+            "JUN": "Jun",
+            "JUL": "Jul",
+            "AUG": "Aug",
+            "SEP": "Sep",
+            "OCT": "Oct",
+            "NOV": "Nov",
+            "DEC": "Dec"
+        }
+    },
+    "QUIZ": {
+        "TITLE": "Knowledge Quiz",
+        "DESCRIPTION": "Test your knowledge and learn the right actions to save lives.",
+        "QUESTION": "Question",
+        "COMPLETED": "completed",
+        "FINAL_RESULT": "Here is your final result",
+        "RETRY": "Retry",
+        "FEEDBACK": {
+            "PERFECT_TITLE": "Amazing! Full Score!",
+            "PERFECT_MSG": "You are an expert in dealing with epilepsy. Your knowledge is excellent and helps save lives.",
+            "GREAT_TITLE": "Great Job!",
+            "GREAT_MSG": "You have great awareness and strong knowledge. Well done!",
+            "GOOD_TITLE": "Very Good",
+            "GOOD_MSG": "You have good basic knowledge, but you can strengthen it with more reading.",
+            "NEEDS_WORK_TITLE": "Needs More Reading",
+            "NEEDS_WORK_MSG": "It's okay, epilepsy is an important topic and we advise you to review the 'Important Advice' section to increase your knowledge."
+        }
+    },
+    "FOOTER": {
+        "RESOURCES": "Resources",
+        "ABOUT": "About",
+        "CONTACT": "Contact Us",
+        "WHAT_WE_DO": "What We Do",
+        "MEDIA": "Media",
+        "TRAVEL_ADVICE": "Travel Advice",
+        "PROTECTION": "Protection",
+        "ASSISTANCE": "Assistance",
+        "ABOUT_DESC": "The Tunisian Association for the Development of Epileptology works to improve the care of people with epilepsy. It is committed to awareness, training, research, and support for patients and their families.",
+        "ADDRESS": "Tunis, Tunisia",
+        "CALL": "Call: +216 1234567890",
+        "EMAIL": "Email: ATDEgmail.com",
+        "COPYRIGHT": "© 2026 All rights reserved. Designed by Microsoft Tech Club ENET'Com"
     }
 }

@@ -2,44 +2,50 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-16 mb-16">
             <div>
-                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">Ressources</h4>
+                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">{{
+                    'FOOTER.RESOURCES' | translate }}</h4>
                 <ul class="space-y-4">
-                    <li><a class="hover:text-white transition-colors" routerLink="/">Accueil</a></li>
-                    <li><a class="hover:text-white transition-colors" routerLink="/advice">Ce que nous faisons</a></li>
-                    <li><a class="hover:text-white transition-colors" href="#">Médias</a></li>
-                    <li><a class="hover:text-white transition-colors" routerLink="/advice">Conseils de voyage</a></li>
-                    <li><a class="hover:text-white transition-colors" href="#">Protection</a></li>
-                    <li><a class="hover:text-white transition-colors" href="#">Assistance</a></li>
+                    <li><a class="hover:text-white transition-colors" routerLink="/">{{ 'HEADER.HOME' | translate }}</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors" routerLink="/advice">{{ 'FOOTER.WHAT_WE_DO' |
+                            translate }}</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#">{{ 'FOOTER.MEDIA' | translate }}</a></li>
+                    <li><a class="hover:text-white transition-colors" routerLink="/advice">{{ 'FOOTER.TRAVEL_ADVICE' |
+                            translate }}</a></li>
+                    <li><a class="hover:text-white transition-colors" href="#">{{ 'FOOTER.PROTECTION' | translate }}</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors" href="#">{{ 'FOOTER.ASSISTANCE' | translate }}</a>
+                    </li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">À Propos</h4>
+                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">{{ 'FOOTER.ABOUT' |
+                    translate }}</h4>
                 <p class="text-sm leading-relaxed">
-                    L'Association Tunisienne pour le Développement de l'Épileptologie œuvre à l'amélioration de la prise
-                    en charge des personnes atteintes d'épilepsie. Elle s'engage dans la sensibilisation, la formation,
-                    la recherche et le soutien aux patients et à leurs familles.
+                    {{ 'FOOTER.ABOUT_DESC' | translate }}
                 </p>
             </div>
             <div>
-                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">Contactez-nous</h4>
+                <h4 class="font-display font-bold text-white mb-8 uppercase tracking-widest text-sm">{{ 'FOOTER.CONTACT'
+                    | translate }}</h4>
                 <ul class="space-y-6">
                     <li class="flex items-start gap-4">
                         <span class="material-symbols-outlined text-primary">location_on</span>
-                        <span class="text-sm">Tunis, Tunisie</span>
+                        <span class="text-sm">{{ 'FOOTER.ADDRESS' | translate }}</span>
                     </li>
                     <li class="flex items-center gap-4">
                         <span class="material-symbols-outlined text-primary">call</span>
-                        <span class="text-sm">Appel : +216 1234567890</span>
+                        <span class="text-sm">{{ 'FOOTER.CALL' | translate }}</span>
                     </li>
                     <li class="flex items-center gap-4">
                         <span class="material-symbols-outlined text-primary">mail</span>
-                        <span class="text-sm">Email : ATDEgmail.com</span>
+                        <span class="text-sm">{{ 'FOOTER.EMAIL' | translate }}</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="border-t border-slate-800 pt-10 text-center text-xs">
-            <p>© 2026 Tous droits réservés. Conçu par Microsoft Tech Club ENET'Com</p>
+            <p>{{ 'FOOTER.COPYRIGHT' | translate }}</p>
         </div>
     </div>
 </footer>

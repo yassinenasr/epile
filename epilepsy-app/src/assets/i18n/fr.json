@@ -101,5 +101,68 @@
         "CASE_3_DESC": "\"Au-delà des apparences de l'inattention.\" Analyse des ruptures de contact brèves chez l'enfant et diagnostic EEG.",
         "NEWSLETTER_TITLE": "Recevoir toutes les mises à jour...",
         "NEWSLETTER_PLACEHOLDER": "VOTRE EMAIL"
+    },
+    "DASHBOARD": {
+        "TITLE": "Mon Tableau de Bord",
+        "SUBTITLE": "Suivez votre progression et gérez votre santé avec des statistiques détaillées sur vos crises, votre sommeil et votre traitement.",
+        "SEIZURE_FREE_DAYS": "Jours sans crise",
+        "GOAL": "Objectif: 60 jours",
+        "MEDICATION": "Prise de Médicaments",
+        "THIS_WEEK": "Cette semaine",
+        "MISSED_DOSE": "1 oubli détecté cette semaine",
+        "SLEEP_QUALITY": "Qualité du Sommeil",
+        "HOURS_PER_NIGHT": "heures / nuit",
+        "WEEKLY_AVG": "Moyenne hebdomadaire stable",
+        "SEIZURE_FREQUENCY": "Fréquence des Crises (2025)",
+        "LAST_6_MONTHS": "6 derniers mois",
+        "THIS_YEAR": "Cette année",
+        "VIEW_REPORT": "Voir le rapport complet",
+        "MONTHS": {
+            "JAN": "Jan",
+            "FEB": "Fév",
+            "MAR": "Mar",
+            "APR": "Avr",
+            "MAY": "Mai",
+            "JUN": "Juin",
+            "JUL": "Juil",
+            "AUG": "Août",
+            "SEP": "Sep",
+            "OCT": "Oct",
+            "NOV": "Nov",
+            "DEC": "Déc"
+        }
+    },
+    "QUIZ": {
+        "TITLE": "Quiz de Sensibilisation",
+        "DESCRIPTION": "Testez vos connaissances et apprenez les bons gestes pour sauver des vies.",
+        "QUESTION": "Question",
+        "COMPLETED": "complété",
+        "FINAL_RESULT": "Voici votre résultat final",
+        "RETRY": "Réessayer",
+        "FEEDBACK": {
+            "PERFECT_TITLE": "Incroyable ! Score parfait !",
+            "PERFECT_MSG": "Vous êtes un expert dans la gestion de l'épilepsie. Vos connaissances sont excellentes et aident à sauver des vies.",
+            "GREAT_TITLE": "Beau travail !",
+            "GREAT_MSG": "Vous avez une grande conscience et de solides connaissances. Bravo !",
+            "GOOD_TITLE": "Très bien",
+            "GOOD_MSG": "Vous avez de bonnes connaissances de base, mais vous pouvez les renforcer par plus de lecture.",
+            "NEEDS_WORK_TITLE": "Besoin de plus de lecture",
+            "NEEDS_WORK_MSG": "Ce n'est pas grave, l'épilepsie est un sujet important et nous vous conseillons de consulter la section 'Conseils Importants' pour enrichir vos connaissances."
+        }
+    },
+    "FOOTER": {
+        "RESOURCES": "Ressources",
+        "ABOUT": "À Propos",
+        "CONTACT": "Contactez-nous",
+        "WHAT_WE_DO": "Ce que nous faisons",
+        "MEDIA": "Médias",
+        "TRAVEL_ADVICE": "Conseils de voyage",
+        "PROTECTION": "Protection",
+        "ASSISTANCE": "Assistance",
+        "ABOUT_DESC": "L'Association Tunisienne pour le Développement de l'Épileptologie œuvre à l'amélioration de la prise en charge des personnes atteintes d'épilepsie. Elle s'engage dans la sensibilisation, la formation, la recherche et le soutien aux patients et à leurs familles.",
+        "ADDRESS": "Tunis, Tunisie",
+        "CALL": "Appel : +216 1234567890",
+        "EMAIL": "Email : ATDEgmail.com",
+        "COPYRIGHT": "© 2026 Tous droits réservés. Conçu par Microsoft Tech Club ENET'Com"
     }
 }

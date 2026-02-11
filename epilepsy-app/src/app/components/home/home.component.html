@@ -76,10 +76,9 @@
         <div class="text-center mb-16">
             <h2
                 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">
-                Mon Tableau de Bord</h2>
+                {{ 'DASHBOARD.TITLE' | translate }}</h2>
             <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                Suivez votre progression et gérez votre santé avec des statistiques détaillées sur vos crises, votre
-                sommeil et votre traitement.
+                {{ 'DASHBOARD.SUBTITLE' | translate }}
             </p>
         </div>
 
@@ -90,8 +89,8 @@
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                     <span class="material-symbols-outlined text-9xl text-green-500">check_circle</span>
                 </div>
-                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Jours
-                    sans crise</h3>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">{{
+                    'DASHBOARD.SEIZURE_FREE_DAYS' | translate }}</h3>
                 <div class="flex items-baseline gap-2">
                     <span class="text-6xl font-extrabold text-slate-900 dark:text-white">42</span>
                     <span class="text-green-500 font-bold flex items-center">
@@ -101,7 +100,7 @@
                 <div class="mt-6 h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
                     <div class="h-full bg-green-500 w-3/4 rounded-full animate-pulse"></div>
                 </div>
-                <p class="mt-2 text-xs text-slate-400">Objectif: 60 jours</p>
+                <p class="mt-2 text-xs text-slate-400">{{ 'DASHBOARD.GOAL' | translate }}</p>
             </div>
 
             <!-- Stat Card 2: Medication Adherence -->
@@ -110,11 +109,11 @@
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                     <span class="material-symbols-outlined text-9xl text-blue-500">medication</span>
                 </div>
-                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Prise de
-                    Médicaments</h3>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">{{
+                    'DASHBOARD.MEDICATION' | translate }}</h3>
                 <div class="flex items-baseline gap-2">
                     <span class="text-6xl font-extrabold text-slate-900 dark:text-white">98%</span>
-                    <span class="text-blue-500 font-bold text-sm">Cette semaine</span>
+                    <span class="text-blue-500 font-bold text-sm">{{ 'DASHBOARD.THIS_WEEK' | translate }}</span>
                 </div>
                 <div class="mt-6 flex gap-1">
                     <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Lun"></div>
@@ -125,7 +124,7 @@
                     <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Sam"></div>
                     <div class="h-8 flex-1 bg-slate-200 dark:bg-slate-700 rounded-md" title="Dim"></div>
                 </div>
-                <p class="mt-2 text-xs text-slate-400">1 oubli détecté cette semaine</p>
+                <p class="mt-2 text-xs text-slate-400">{{ 'DASHBOARD.MISSED_DOSE' | translate }}</p>
             </div>
 
             <!-- Stat Card 3: Sleep Quality -->
@@ -134,11 +133,11 @@
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                     <span class="material-symbols-outlined text-9xl text-purple-500">bedtime</span>
                 </div>
-                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Qualité
-                    du Sommeil</h3>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">{{
+                    'DASHBOARD.SLEEP_QUALITY' | translate }}</h3>
                 <div class="flex items-baseline gap-2">
                     <span class="text-6xl font-extrabold text-slate-900 dark:text-white">7.5</span>
-                    <span class="text-sm text-slate-500">heures / nuit</span>
+                    <span class="text-sm text-slate-500">{{ 'DASHBOARD.HOURS_PER_NIGHT' | translate }}</span>
                 </div>
                 <!-- Simple Bar Chart CSS -->
                 <div class="mt-6 flex items-end gap-2 h-16">
@@ -146,22 +145,23 @@
                     <div class="w-1/7 bg-purple-400 dark:bg-purple-800 h-12 rounded-t w-full"></div>
                     <div class="w-1/7 bg-purple-500 dark:bg-purple-700 h-8 rounded-t w-full"></div>
                     <div class="w-1/7 bg-purple-600 dark:bg-purple-600 h-14 rounded-t w-full"></div>
-                    <div class="w-1/7 bg-purple-500 dark:bg-purple-700 h-12 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-600 dark:bg-purple-700 h-12 rounded-t w-full"></div>
                     <div class="w-1/7 bg-purple-400 dark:bg-purple-800 h-10 rounded-t w-full"></div>
                     <div class="w-1/7 bg-purple-300 dark:bg-purple-900 h-16 rounded-t w-full"></div>
                 </div>
-                <p class="mt-2 text-xs text-slate-400">Moyenne hebdomadaire stable</p>
+                <p class="mt-2 text-xs text-slate-400">{{ 'DASHBOARD.WEEKLY_AVG' | translate }}</p>
             </div>
         </div>
 
         <!-- Main Chart Section (Simulated) -->
         <div class="mt-8 bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white">Fréquence des Crises (2025)
+                <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white">{{
+                    'DASHBOARD.SEIZURE_FREQUENCY' | translate }}
                 </h3>
                 <select class="bg-slate-50 dark:bg-slate-700 border-none rounded-lg text-sm p-2 outline-none">
-                    <option>6 derniers mois</option>
-                    <option>Cette année</option>
+                    <option>{{ 'DASHBOARD.LAST_6_MONTHS' | translate }}</option>
+                    <option>{{ 'DASHBOARD.THIS_YEAR' | translate }}</option>
                 </select>
             </div>
 
@@ -187,7 +187,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">3</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Jan</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.JAN' | translate }}</span>
                 </div>
                 <!-- FEB -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -199,7 +199,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">1</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Fév</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.FEB' | translate }}</span>
                 </div>
                 <!-- MAR -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -209,7 +209,7 @@
                             class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Mar</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.MAR' | translate }}</span>
                 </div>
                 <!-- APR -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -221,7 +221,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Avr</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.APR' | translate }}</span>
                 </div>
                 <!-- MAY -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -233,7 +233,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">5</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Mai</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.MAY' | translate }}</span>
                 </div>
                 <!-- JUN -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -245,7 +245,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">1</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Juin</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.JUN' | translate }}</span>
                 </div>
                 <!-- JUL -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -257,7 +257,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">4</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Juil</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.JUL' | translate }}</span>
                 </div>
                 <!-- AUG -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -269,7 +269,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Août</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.AUG' | translate }}</span>
                 </div>
                 <!-- SEP -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -281,7 +281,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">6</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Sep</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.SEP' | translate }}</span>
                 </div>
                 <!-- OCT -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -293,7 +293,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">3</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Oct</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.OCT' | translate }}</span>
                 </div>
                 <!-- NOV -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -303,7 +303,7 @@
                             class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Nov</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.NOV' | translate }}</span>
                 </div>
                 <!-- DEC -->
                 <div class="flex flex-col items-center gap-2 w-full group">
@@ -315,7 +315,7 @@
                                 class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
                         </div>
                     </div>
-                    <span class="text-xs text-slate-500 uppercase">Déc</span>
+                    <span class="text-xs text-slate-500 uppercase">{{ 'DASHBOARD.MONTHS.DEC' | translate }}</span>
                 </div>
             </div>
         </div>

@@ -59,29 +59,29 @@ export class QuizComponent implements OnInit {
     if (percentage === 100) {
       return {
         emoji: '🏆',
-        title: 'مذهل! علامة كاملة!',
-        message: 'أنت خبير في التعامل مع الصرع. معلوماتك ممتازة وتساعد في إنقاذ الحياة.',
+        title: 'QUIZ.FEEDBACK.PERFECT_TITLE',
+        message: 'QUIZ.FEEDBACK.PERFECT_MSG',
         colorClass: 'text-yellow-500'
       };
     } else if (percentage >= 80) {
       return {
         emoji: '🌟',
-        title: 'عمل رائع!',
-        message: 'لديك وعي كبير ومعلومات قوية. أحسنت!',
+        title: 'QUIZ.FEEDBACK.GREAT_TITLE',
+        message: 'QUIZ.FEEDBACK.GREAT_MSG',
         colorClass: 'text-purple-500'
       };
     } else if (percentage >= 50) {
       return {
         emoji: '👍',
-        title: 'جيد جداً',
-        message: 'لديك معلومات أساسية جيدة، لكن يمكنك تعزيزها بالمزيد من القراءة.',
+        title: 'QUIZ.FEEDBACK.GOOD_TITLE',
+        message: 'QUIZ.FEEDBACK.GOOD_MSG',
         colorClass: 'text-blue-500'
       };
     } else {
       return {
         emoji: '📚',
-        title: 'تحتاج للمزيد من الاطلاع',
-        message: 'لا بأس، الصرع موضوع مهم وننصحك بمراجعة قسم "نصيحة اليوم" لزيادة معلوماتك.',
+        title: 'QUIZ.FEEDBACK.NEEDS_WORK_TITLE',
+        message: 'QUIZ.FEEDBACK.NEEDS_WORK_MSG',
         colorClass: 'text-slate-500'
       };
     }
