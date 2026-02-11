@@ -19,8 +19,7 @@
 
         <!-- 3D Brain Viz -->
         <div class="relative flex justify-center items-center">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ7J47sQS5iD0AsvEufxGswL-kn-BgmPaH8grqfpdZ6RcB23Q7a3TN6SXd5BHm9UZ-U1dbBuMn0SRQHFDi0RTDqv-VxSk-35LA-QVwVg0UmFQWi4CNssuqGlIy_GuOiN1sZhAgvhQ6SVKFic4orfAofl8qJlaUI8b5jwBkwXkKQm4L7I9YUk6vmK9xKFrNXedyPGzoaOkt-dQ0gU9OHxmheUVg0VIhx7ZCdK4clOfhnQsVxC1PZ68wxzyeJ7LXdlXFVaPaUVdBz2zP"
-                alt="Purple 3D Brain visualization"
+            <img src="assets/im1.jpg" alt="Purple 3D Brain visualization"
                 class="w-full max-w-lg drop-shadow-2xl animate-pulse duration-[3000ms] rounded-full mix-blend-multiply dark:mix-blend-normal opacity-90">
 
             <!-- Nav Buttons (Decorative) -->
@@ -59,159 +58,273 @@
             </div>
         </div>
 
-        <!-- What is Epilepsy -->
-        <div class="flex flex-col md:flex-row-reverse items-center gap-12 pt-12">
-            <div class="md:w-1/2">
-                <h2
-                    class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-tight">
-                    {{ 'HOME.FEATURE_2_TITLE' | translate }}</h2>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-lg">
-                    {{ 'HOME.FEATURE_2_DESC' | translate }}
-                </p>
-                <div class="space-y-4 mb-8">
-                    <div class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT1' | translate
-                            }}</span>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT2' | translate
-                            }}</span>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT3' | translate
-                            }}</span>
-                    </div>
-                </div>
-                <button routerLink="/advice"
-                    class="bg-white/10 dark:bg-white/5 border border-white/20 px-8 py-3 rounded font-bold uppercase tracking-wider hover:bg-white/20 transition-all">{{
-                    'BUTTONS.READ_MORE' | translate }}</button>
-            </div>
-            <div class="md:w-1/2">
-                <div
-                    class="relative bg-white dark:bg-slate-800 p-8 rounded-full shadow-inner aspect-square flex items-center justify-center">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNIF_cJfscZLgxUDUoIn-CSubGJ18maajFUHm7VoBHp_RsKaM6H5vJWUVY0NZMC3k_o1f0dBygqB8aVeWPfOrlvVOwAcKfyIQMbcF6Q1SmpdHVvjmwq-qPRHRLo5BDvORL08HwRNc8GJvTsf_H23S-AT8Z2kMc-AAndCV9zQzSDKNkPh75u-rbD5yOEXshPVIJIkZK8L0RPEWt7USLJWcMjokxGna9ua-6IgNPrtTw7yx0zCWidcX0CqUfF1Tu3N-LpwOzndAWd7PJ"
-                        alt="Human health illustration" class="w-3/4 rounded-full">
-                    <!-- Floating Tags -->
-                    <div
-                        class="absolute top-4 right-1/4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        {{ 'HOME.TAG_CRISES' | translate }}</div>
-                    <div
-                        class="absolute bottom-1/4 -left-4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        {{ 'HOME.TAG_MOOD' | translate }}</div>
-                    <div
-                        class="absolute bottom-12 right-0 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        {{ 'HOME.TAG_MEMORY' | translate }}</div>
-                </div>
-            </div>
+
+
+        <!-- Replacement Image -->
+        <div class="flex justify-center items-center pt-12 pb-8">
+            <img src="assets/fdaca107-47f4-4bad-a50b-4b15d564be3b.jpg" alt="Child in classroom"
+                class="w-full max-w-5xl rounded-3xl shadow-2xl hover:scale-[1.01] transition-transform duration-500">
         </div>
     </div>
 </section>
 
 <!-- Experts Section -->
+
+<!-- Statistical Dashboard Section -->
 <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-16 uppercase tracking-widest">
-            {{ 'HOME.EXPERTS_TITLE' | translate }}</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-end">
-            <!-- Expert 1 -->
-            <div class="bg-white dark:bg-slate-800 p-8 pt-0 rounded-3xl expert-card-shadow relative mt-20">
-                <div
-                    class="w-32 h-32 mx-auto -mt-16 mb-6 rounded-full border-4 border-white dark:border-slate-800 overflow-hidden shadow-xl">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLmq_SYao8-VBtC1OxtJVKavplIK_MCRDXSB8ft0NKJ1DRkddLeGoWK7r0zL-HbLmysfttYCtRGrOSDCUW5Az3kE9Fu7oECV-we_3VsAe4epJnFtvBcITV1LHdV8luRK0JR9jKb8S1smGvbC9_s0f7BQf1OIn4V9jPWnvxmJio2E6Ixd9MGbzKtDM0oo5omzkFtSF3KE-XfJ_niCVhWSL_W9CJA0cXdmZk4EBH4sBNq1eQwBto7sW9KMtibgcEqe5ADo_mQwQTufP_"
-                        alt="Dr. Jerome Engel Jr" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-display font-bold text-xl mb-4">DR. JEROME ENGEL JR</h3>
-                <p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
-                    {{ 'HOME.EXPERT_1_QUOTE' | translate }}
-                </p>
-                <span class="material-symbols-outlined text-4xl text-primary opacity-30">format_quote</span>
-            </div>
-            <!-- Expert 2 -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2
+                class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">
+                Mon Tableau de Bord</h2>
+            <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+                Suivez votre progression et gérez votre santé avec des statistiques détaillées sur vos crises, votre
+                sommeil et votre traitement.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Stat Card 1: Seizure Free Days -->
             <div
-                class="bg-white dark:bg-slate-800 p-12 pt-0 rounded-3xl expert-card-shadow relative mt-20 md:scale-105">
-                <div
-                    class="w-48 h-48 mx-auto -mt-24 mb-6 rounded-full border-4 border-white dark:border-slate-800 overflow-hidden shadow-2xl">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMVN7GRyLa8wYoqt7dQ7P1zK1cTbwVKzwu63IhqPhQDrby47kGL-ooBGriJM3FC6fnaRIVnn6PtyrrcYmCVL4tzD4VMtmBNtlUAH4OIVH_69lnB6U-ziAo-DFUDyUYZJudwTbiMNELQEfhD2AgUhe4oWqH07oKcx1pdL2TnHZn8bupuNXXklXEZpcK5T_bmM0IobLeh0Ri3tiVV54bornrtFuqJ4xYZfCO9LNtnca2jfC61AXjY_u6WvWcuijFe3P8sNYcS_rxfik-"
-                        alt="Dr. Jacqueline A. French" class="w-full h-full object-cover">
+                class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-9xl text-green-500">check_circle</span>
                 </div>
-                <h3 class="font-display font-bold text-2xl mb-6">DR. JACQUELINE A. FRENCH</h3>
-                <p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed text-lg">
-                    {{ 'HOME.EXPERT_2_QUOTE' | translate }}
-                </p>
-                <span class="material-symbols-outlined text-5xl text-primary opacity-30">format_quote</span>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Jours
+                    sans crise</h3>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-6xl font-extrabold text-slate-900 dark:text-white">42</span>
+                    <span class="text-green-500 font-bold flex items-center">
+                        <span class="material-symbols-outlined text-sm">arrow_upward</span> +5
+                    </span>
+                </div>
+                <div class="mt-6 h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                    <div class="h-full bg-green-500 w-3/4 rounded-full animate-pulse"></div>
+                </div>
+                <p class="mt-2 text-xs text-slate-400">Objectif: 60 jours</p>
+            </div>
+
+            <!-- Stat Card 2: Medication Adherence -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-9xl text-blue-500">medication</span>
+                </div>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Prise de
+                    Médicaments</h3>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-6xl font-extrabold text-slate-900 dark:text-white">98%</span>
+                    <span class="text-blue-500 font-bold text-sm">Cette semaine</span>
+                </div>
+                <div class="mt-6 flex gap-1">
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Lun"></div>
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Mar"></div>
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Mer"></div>
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Jeu"></div>
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Ven"></div>
+                    <div class="h-8 flex-1 bg-blue-500 rounded-md opacity-100" title="Sam"></div>
+                    <div class="h-8 flex-1 bg-slate-200 dark:bg-slate-700 rounded-md" title="Dim"></div>
+                </div>
+                <p class="mt-2 text-xs text-slate-400">1 oubli détecté cette semaine</p>
+            </div>
+
+            <!-- Stat Card 3: Sleep Quality -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-9xl text-purple-500">bedtime</span>
+                </div>
+                <h3 class="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider text-sm mb-2">Qualité
+                    du Sommeil</h3>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-6xl font-extrabold text-slate-900 dark:text-white">7.5</span>
+                    <span class="text-sm text-slate-500">heures / nuit</span>
+                </div>
+                <!-- Simple Bar Chart CSS -->
+                <div class="mt-6 flex items-end gap-2 h-16">
+                    <div class="w-1/7 bg-purple-300 dark:bg-purple-900 h-10 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-400 dark:bg-purple-800 h-12 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-500 dark:bg-purple-700 h-8 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-600 dark:bg-purple-600 h-14 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-500 dark:bg-purple-700 h-12 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-400 dark:bg-purple-800 h-10 rounded-t w-full"></div>
+                    <div class="w-1/7 bg-purple-300 dark:bg-purple-900 h-16 rounded-t w-full"></div>
+                </div>
+                <p class="mt-2 text-xs text-slate-400">Moyenne hebdomadaire stable</p>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Research Cases -->
-<section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-2 uppercase tracking-widest">
-            {{ 'HOME.RESEARCH_TITLE' | translate }}</h2>
-        <p class="text-slate-500 mb-16">{{ 'HOME.RESEARCH_DESC' | translate }}</p>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Case 1 -->
+        <!-- Main Chart Section (Simulated) -->
+        <div class="mt-8 bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display font-bold text-xl text-slate-900 dark:text-white">Fréquence des Crises (2025)
+                </h3>
+                <select class="bg-slate-50 dark:bg-slate-700 border-none rounded-lg text-sm p-2 outline-none">
+                    <option>6 derniers mois</option>
+                    <option>Cette année</option>
+                </select>
+            </div>
+
+            <!-- CSS Chart Container -->
             <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
-                <div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJ7skfRsHVCvXAhjwJuPykjl5rsIxho6GT8NQ9O9csvFwH69FotJUErNQqnYdihGi3FyGB1eHny9h5xaLnVLQr_HBlsA435_pTQxE9Javd6H0qMdesvMMQkDXTS9WeOySY0QBo2ZFV2G43KxZ_oqh1qZwIG0O0Ln6ILovMeH092Y_c0fg14Q8i4x5y-5Cy7RbkTW0Oys7vRNEoGqD3O2snBhk5lRe_RgE7e7fJOLk6J_Q6ulKoxQbeSV77KNgjTTPt7Gnzn45sUR9"
-                        alt="Microscopic brain image"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div
-                        class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
-                            'BUTTONS.READ_MORE' | translate }}</button>
-                    </div>
+                class="relative h-64 w-full flex items-end justify-between px-4 pb-8 border-b border-l border-slate-200 dark:border-slate-700 gap-1">
+                <!-- Y-axis labels -->
+                <div
+                    class="absolute left-0 top-0 bottom-8 -translate-x-full pr-2 flex flex-col justify-between text-xs text-slate-400 h-full py-2">
+                    <span>10</span>
+                    <span>5</span>
+                    <span>0</span>
                 </div>
-                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_1_TITLE' | translate }}</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_1_DESC' | translate }}</p>
-                <div class="w-full flex justify-center">
-                    <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
+
+                <!-- Bars Jan-Dec -->
+                <!-- JAN -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 30%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">3</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Jan</span>
+                </div>
+                <!-- FEB -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 10%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">1</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Fév</span>
+                </div>
+                <!-- MAR -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 0%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Mar</span>
+                </div>
+                <!-- APR -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 20%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Avr</span>
+                </div>
+                <!-- MAY -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 50%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">5</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Mai</span>
+                </div>
+                <!-- JUN -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 10%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">1</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Juin</span>
+                </div>
+                <!-- JUL -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 40%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">4</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Juil</span>
+                </div>
+                <!-- AUG -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 20%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Août</span>
+                </div>
+                <!-- SEP -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 60%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">6</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Sep</span>
+                </div>
+                <!-- OCT -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 30%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">3</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Oct</span>
+                </div>
+                <!-- NOV -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 0%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Nov</span>
+                </div>
+                <!-- DEC -->
+                <div class="flex flex-col items-center gap-2 w-full group">
+                    <div
+                        class="w-full bg-red-100 dark:bg-red-900/30 rounded-t-lg relative h-full flex items-end transition-all duration-500 group-hover:bg-red-200 dark:group-hover:bg-red-900/50">
+                        <div style="height: 20%"
+                            class="w-full bg-red-500/80 rounded-t-lg mx-auto transition-all duration-1000 relative">
+                            <span
+                                class="absolute -top-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">2</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-500 uppercase">Déc</span>
                 </div>
             </div>
-            <!-- Case 2 -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
-                <div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklwJt8IQjk26hSq-DgvHFvB8uNb72ZWZQgHDRVcLDcgRsB4-M_y2Q1nSWfbP5lysMbvLoVBw1bSD6zrjvwpiUiLAZkYGB_K0Z4FLbbQaP0wiETY3AaAuipytgpeGdh9oQsx2s-CdL52hQB5_pg4lWjDFsevBWjyn-13xU50qqaQIa45DR-HzFp3FCWpKAyh7ICvwevwMeH2AQvRVN5XMNdKW6y0Rebs8zJhwVVhg4wyietm1Tesalt13arL6NIt11FC7jMtushXbJ"
-                        alt="Medical professional"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div
-                        class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
-                            'BUTTONS.READ_MORE' | translate }}</button>
-                    </div>
-                </div>
-                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_2_TITLE' | translate }}</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_2_DESC' | translate }}</p>
-                <div class="w-full flex justify-center">
-                    <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
-                </div>
-            </div>
-            <!-- Case 3 -->
-            <div
-                class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl hover:translate-y-[-8px] transition-transform duration-300">
-                <div class="relative group mb-8 rounded-xl overflow-hidden aspect-video">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC--ILuYqpEFMl9XT3g6cqky1mnyJ1en3aKoH5k_0nt6arXe0mgOt58u3a5CyksCHfHWRZls4XSv6yQhpN2RhluxSIKoCANI6xxg8oJQsVRyVatJCdppV09HEM8XM0kkzIUq5BrnHAwWUnu8vvXaiOHF05AbsDj73MfklzQ2DCmOSxcayA2kRpYLtc1G_H7RPGj0ZBfaWB3rYR1PPJLF_GWbK1i1e8yZrVGtPFnl48jXg90jb_phsm1CJlkLjw6hMDk5nloEuhH7zL5"
-                        alt="Pediatric research"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div
-                        class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
-                            'BUTTONS.READ_MORE' | translate }}</button>
-                    </div>
-                </div>
-                <!-- Expert 3 (fixed) -->
-                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_3_TITLE' | translate }}</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_3_DESC' | translate }}</p>
-                <div class="w-full flex justify-center">
-                    <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
-                </div>
-            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <button
+                class="bg-primary hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform hover:scale-105">
+                Voir le rapport complet
+            </button>
         </div>
     </div>
 </section>
@@ -237,3 +350,5 @@
         </div>
     </div>
 </section>
+
+<app-chatbot></app-chatbot>
