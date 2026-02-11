@@ -164,5 +164,27 @@
         "CALL": "Appel : +216 1234567890",
         "EMAIL": "Email : ATDEgmail.com",
         "COPYRIGHT": "© 2026 Tous droits réservés. Conçu par Microsoft Tech Club ENET'Com"
+    },
+    "CHATBOT": {
+        "GREETING": "Bonjour et bienvenue! Je suis votre assistant virtuel, ravi de vous aider à mieux comprendre l'épilepsie et de répondre à vos questions.",
+        "RESTART": "Retour au menu principal",
+        "KNOW_MORE": "Voulez-vous en savoir plus?",
+        "OPTIONS": {
+            "WHAT_IS": {
+                "LABEL": "Qu'est-ce que l'épilepsie?",
+                "BRIEF": "L'épilepsie est une affection neurologique chronique qui se manifeste par des crises récurrentes dues à des décharges électriques excessives dans le cerveau. Ce n'est ni une maladie mentale ni contagieuse.",
+                "BUTTON": "Lire plus de détails"
+            },
+            "QUIZ": {
+                "LABEL": "Testez vos connaissances",
+                "BRIEF": "Nous vous invitons à évaluer vos connaissances sur l'épilepsie grâce à notre quiz interactif et éducatif. Souhaitez-vous essayer?",
+                "BUTTON": "Commencer le Quiz"
+            },
+            "ADVICE": {
+                "LABEL": "Conseils et astuces",
+                "BRIEF": "Pour mieux vivre avec l'épilepsie, il est recommandé de : maintenir un sommeil régulier, prendre ses médicaments à heure fixe, gérer son stress et éviter les facteurs déclenchants.",
+                "BUTTON": "Voir tous les conseils"
+            }
+        }
     }
 }

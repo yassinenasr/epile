@@ -164,5 +164,27 @@
         "CALL": "Call: +216 1234567890",
         "EMAIL": "Email: ATDEgmail.com",
         "COPYRIGHT": "© 2026 All rights reserved. Designed by Microsoft Tech Club ENET'Com"
+    },
+    "CHATBOT": {
+        "GREETING": "Hello and welcome! I am your intelligent assistant, here to kindly support you in understanding epilepsy and answering your inquiries.",
+        "RESTART": "Back to main menu",
+        "KNOW_MORE": "Would you like to know more?",
+        "OPTIONS": {
+            "WHAT_IS": {
+                "LABEL": "What is Epilepsy?",
+                "BRIEF": "Epilepsy is a chronic central nervous system disorder characterized by recurrent seizures caused by temporary abnormal electrical activity in the brain. It is neither a mental illness nor contagious.",
+                "BUTTON": "Read More Details"
+            },
+            "QUIZ": {
+                "LABEL": "Test your knowledge",
+                "BRIEF": "We invite you to assess your understanding of epilepsy through our interactive and educational quiz. Would you like to take the challenge?",
+                "BUTTON": "Start the Quiz Now"
+            },
+            "ADVICE": {
+                "LABEL": "Advice & Tips",
+                "BRIEF": "To better manage epilepsy, we recommend: maintaining a regular sleep schedule, taking medications strictly on time, managing stress, and avoiding known seizure triggers.",
+                "BUTTON": "View All Tips"
+            }
+        }
     }
 }
