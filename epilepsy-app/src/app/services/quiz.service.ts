@@ -14,6 +14,7 @@ export interface Scenario {
     id: number;
     situation: string;
     options: Option[];
+    fact?: string;
 }
 
 @Injectable({

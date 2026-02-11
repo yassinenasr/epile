@@ -43,6 +43,14 @@ export class QuizComponent implements OnInit {
     }
   }
 
+  prevScenario() {
+    if (this.currentScenarioIndex > 0) {
+      this.currentScenarioIndex--;
+      this.selectedOptionId = null;
+      this.isAnswered = false;
+    }
+  }
+
   nextScenario() {
     if (this.currentScenarioIndex < this.scenarios.length - 1) {
       this.currentScenarioIndex++;
