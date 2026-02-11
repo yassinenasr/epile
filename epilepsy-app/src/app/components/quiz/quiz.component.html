@@ -1,85 +1,121 @@
 <div class="relative py-12 brain-bg overflow-hidden">
     <div class="absolute inset-0 bg-white/80 dark:bg-background-dark/85 backdrop-blur-sm"></div>
     <div class="relative max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-3xl md:text-5xl font-extrabold text-primary mb-4">Quiz de Sensibilisation</h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400">Testez vos connaissances et apprenez les bons gestes pour
-            sauver des vies.</p>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-primary mb-4">اختبار المعلومات</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">اختبر معلوماتك وتصرفك في المواقع المختلفة related to
+            epilepsy.
+        </p>
     </div>
 </div>
 
 <main class="max-w-4xl mx-auto px-4 -mt-10 pb-20 relative z-10">
-    <div
+    <div *ngIf="!isGameOver; else resultsTemplate"
         class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-800">
         <!-- Progress Header -->
         <div class="bg-slate-50 dark:bg-slate-800/50 p-6 border-b border-slate-100 dark:border-slate-800">
             <div class="flex justify-between items-center mb-4">
-                <span class="text-sm font-bold text-primary tracking-wider uppercase">Question {{ currentQuestionIndex +
-                    1 }} sur {{ questions.length }}</span>
-                <span class="text-sm font-semibold text-slate-500">{{ progress | number:'1.0-0' }}% complété</span>
+                <span class="text-sm font-bold text-primary tracking-wider uppercase">السؤال {{ currentScenarioIndex +
+                    1 }} من {{ scenarios.length }}</span>
+                <span class="text-sm font-semibold text-slate-500">{{ progress | number:'1.0-0' }}% مكتمل</span>
             </div>
             <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5">
                 <div class="bg-primary h-2.5 rounded-full progress-bar" [style.width.%]="progress"></div>
             </div>
         </div>
 
-        <!-- Question Content -->
-        <div class="p-8 md:p-12">
+        <!-- Scenario Content -->
+        <div class="p-8 md:p-12 animate-slide-up" *ngFor="let s of [currentScenario]">
+
             <div class="mb-10">
-                <h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900 dark:text-white">
-                    {{ currentQuestion.text }}
+                <h2 class="text-2xl md:text-3xl font-bold leading-tight text-slate-900 dark:text-white" dir="rtl">
+                    {{ currentScenario.situation }}
                 </h2>
             </div>
 
             <!-- Options -->
             <div class="grid gap-4 mb-12">
-                <button *ngFor="let option of currentQuestion.options" (click)="selectOption(option.id)" [ngClass]="{
-                        'border-primary bg-purple-50 dark:bg-primary/10': selectedOptionId === option.id,
-                        'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800': selectedOptionId !== option.id
+                <button *ngFor="let option of currentScenario.options" (click)="selectOption(option.id)"
+                    [disabled]="isAnswered" [ngClass]="{
+                        'border-primary bg-purple-50 dark:bg-primary/10': !isAnswered && selectedOptionId === option.id,
+                        'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary dark:hover:border-primary': !isAnswered && selectedOptionId !== option.id,
+                        'border-green-500 bg-green-100 dark:bg-green-900/30 dark:border-green-500': isAnswered && option.isCorrect,
+                        'border-red-500 bg-red-100 dark:bg-red-900/30 dark:border-red-500': isAnswered && !option.isCorrect && selectedOptionId === option.id,
+                        'opacity-50 cursor-not-allowed': isAnswered && !option.isCorrect && selectedOptionId !== option.id
                     }"
-                    class="option-card group flex items-center p-5 rounded-xl border-2 hover:border-primary dark:hover:border-primary text-left transition-all">
+                    class="option-card group flex items-center p-5 rounded-xl border-2 text-right transition-all duration-300 flex-row-reverse relative overflow-hidden">
+
                     <span [ngClass]="{
-                        'bg-primary text-white border-primary': selectedOptionId === option.id,
-                        'border-slate-200 dark:border-slate-700 text-slate-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary': selectedOptionId !== option.id
+                        'bg-primary text-white border-primary': !isAnswered && selectedOptionId === option.id,
+                        'border-slate-200 dark:border-slate-700 text-slate-400 group-hover:bg-primary group-hover:text-white group-hover:border-primary': !isAnswered && selectedOptionId !== option.id,
+                        'bg-green-500 text-white border-green-500': isAnswered && option.isCorrect,
+                        'bg-red-500 text-white border-red-500': isAnswered && !option.isCorrect && selectedOptionId === option.id,
+                        'border-slate-200 dark:border-slate-700 text-slate-400': isAnswered && !option.isCorrect && selectedOptionId !== option.id
                     }"
-                        class="flex-shrink-0 w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold mr-4 transition-colors">
+                        class="flex-shrink-0 w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold ml-4 transition-colors z-10">
                         {{ option.id }}
                     </span>
+
                     <span [ngClass]="{
-                        'text-primary': selectedOptionId === option.id,
-                        'text-slate-700 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary': selectedOptionId !== option.id
-                    }" class="text-lg font-medium">
+                        'text-primary': !isAnswered && selectedOptionId === option.id,
+                        'text-slate-700 dark:text-slate-300 group-hover:text-primary dark:group-hover:text-primary': !isAnswered && selectedOptionId !== option.id,
+                        'text-green-700 dark:text-green-400 font-bold': isAnswered && option.isCorrect,
+                        'text-red-700 dark:text-red-400 font-bold': isAnswered && !option.isCorrect && selectedOptionId === option.id
+                    }" class="text-lg font-medium flex-grow z-10">
                         {{ option.text }}
                     </span>
-                    <span *ngIf="selectedOptionId === option.id"
-                        class="material-icons ml-auto text-primary">check_circle</span>
+
+                    <span *ngIf="isAnswered && option.isCorrect"
+                        class="material-icons mr-auto text-green-500 animate-bounce">check_circle</span>
+                    <span *ngIf="isAnswered && !option.isCorrect && selectedOptionId === option.id"
+                        class="material-icons mr-auto text-red-500">cancel</span>
+                    <span *ngIf="!isAnswered && selectedOptionId === option.id"
+                        class="material-icons mr-auto text-primary">check_circle</span>
                 </button>
             </div>
 
             <!-- Nav Buttons -->
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0"
-                    class="flex items-center gap-2 text-slate-500 hover:text-primary font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                    <span class="material-icons">arrow_back</span>
-                    Précédent
-                </button>
-                <button (click)="nextQuestion()"
-                    class="w-full sm:w-auto bg-primary hover:bg-purple-800 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/30 transition-all flex items-center justify-center gap-2">
-                    {{ currentQuestionIndex === questions.length - 1 ? 'Terminer' : 'Suivant' }}
-                    <span class="material-icons">arrow_forward</span>
+            <div class="flex flex-col sm:flex-row justify-end items-center gap-4">
+                <button (click)="nextScenario()" [disabled]="!selectedOptionId"
+                    class="w-full sm:w-auto bg-primary hover:bg-purple-800 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/30 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                    {{ currentScenarioIndex === scenarios.length - 1 ? 'إنهاء' : 'التالي' }}
+                    <span class="material-icons transform rotate-180">arrow_forward</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Fact Box -->
-    <div
-        class="mt-8 bg-purple-100 dark:bg-primary/5 p-6 rounded-2xl border border-purple-200 dark:border-primary/20 flex gap-4">
-        <span class="material-icons text-primary text-3xl">lightbulb</span>
-        <div>
-            <h4 class="font-bold text-primary mb-1">Le saviez-vous ?</h4>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                {{ currentQuestion.fact }}
+    <!-- Explanation Box (shown after selection if you wanted immediate feedback, but let's keep it simple correctly per logic request or show at end? Let's show it per scenario if they wanted? The user asked for "what done with score at the end". Let's show explanation after choice?) -->
+    <!-- For now, simplifying to just scenarios flow. Explanation could be shown if we wanted immediate feedback. -->
+
+    <ng-template #resultsTemplate>
+        <div
+            class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl p-8 md:p-12 text-center border border-slate-100 dark:border-slate-800 animate-fade-in">
+
+            <div class="text-8xl mb-6 animate-bounce">
+                {{ resultFeedback.emoji }}
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2" [ngClass]="resultFeedback.colorClass">
+                {{ resultFeedback.title }}
+            </h2>
+
+            <p class="text-slate-600 dark:text-slate-400 mb-8 text-lg">إليك نتيجتك النهائية</p>
+
+            <div
+                class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600 mb-8 tracking-tighter">
+                {{ score }} <span class="text-3xl text-slate-400 font-normal">/ {{ scenarios.length }}</span>
+            </div>
+
+            <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+                dir="rtl">
+                {{ resultFeedback.message }}
             </p>
+
+            <button (click)="restartQuiz()"
+                class="bg-primary hover:bg-purple-800 text-white px-8 py-3 rounded-full font-bold shadow-lg transition-transform hover:scale-105">
+                إعادة المحاولة
+            </button>
         </div>
-    </div>
+    </ng-template>
+
 </main>

@@ -1,81 +1,101 @@
-import { Component } from '@angular/core';
-
-interface Question {
-  id: number;
-  text: string;
-  options: { id: string, text: string, isCorrect: boolean }[];
-  fact: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { QuizService, Scenario } from '../../services/quiz.service';
 
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css']
 })
-export class QuizComponent {
-  currentQuestionIndex = 0;
+export class QuizComponent implements OnInit {
+  currentScenarioIndex = 0;
   selectedOptionId: string | null = null;
   score = 0;
+  isGameOver = false;
+  isAnswered = false;
 
-  questions: Question[] = [
-    {
-      id: 1,
-      text: "Qu'est-ce que l'épilepsie ?",
-      options: [
-        { id: 'A', text: "Une maladie mentale contagieuse.", isCorrect: false },
-        { id: 'B', text: "Une affection neurologique chronique.", isCorrect: true },
-        { id: 'C', text: "Une forme de somnambulisme.", isCorrect: false },
-        { id: 'D', text: "Un virus saisonnier.", isCorrect: false }
-      ],
-      fact: "L'épilepsie n'est pas une maladie mentale. C'est un trouble neurologique qui peut toucher tout le monde."
-    },
-    {
-      id: 2,
-      text: "Quel est le signe le plus fréquent ?",
-      options: [
-        { id: 'A', text: "Avoir très soif.", isCorrect: false },
-        { id: 'B', text: "Des crises convulsives répétées.", isCorrect: true },
-        { id: 'C', text: "Une toux persistante.", isCorrect: false },
-        { id: 'D', text: "Des rougeurs sur la peau.", isCorrect: false }
-      ],
-      fact: "Les crises peuvent prendre plusieurs formes : convulsions, absences, ou sensations étranges."
-    },
-    {
-      id: 3,
-      text: "Quels sont les premiers secours lors d'une crise tonico-clonique ?",
-      options: [
-        { id: 'A', text: "Mettre un objet dans la bouche pour éviter de se mordre la langue.", isCorrect: false },
-        { id: 'B', text: "Protéger la tête, noter l'heure et mettre la personne en PLS après la crise.", isCorrect: true },
-        { id: 'C', text: "Maintenir fermement la personne pour arrêter les secousses.", isCorrect: false },
-        { id: 'D', text: "Lui donner un verre d'eau immédiatement pendant la crise.", isCorrect: false }
-      ],
-      fact: "Il ne faut jamais rien mettre dans la bouche d'une personne en crise. C'est un mythe dangereux."
-    }
-  ];
+  scenarios: Scenario[] = [];
 
-  get currentQuestion() {
-    return this.questions[this.currentQuestionIndex];
+  constructor(private quizService: QuizService) { }
+
+  ngOnInit() {
+    this.quizService.getQuestions().subscribe(questions => {
+      this.scenarios = questions;
+    });
+  }
+
+  get currentScenario() {
+    return this.scenarios[this.currentScenarioIndex];
   }
 
   get progress() {
-    return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
+    return this.scenarios.length ? ((this.currentScenarioIndex + 1) / this.scenarios.length) * 100 : 0;
   }
 
   selectOption(optionId: string) {
+    if (this.isAnswered) return; // Prevent changing selection once answered
     this.selectedOptionId = optionId;
+    this.isAnswered = true;
+
+    // Calculate score immediately
+    const selectedOption = this.currentScenario.options.find(o => o.id === this.selectedOptionId);
+    if (selectedOption) {
+      this.score += selectedOption.points;
+    }
   }
 
-  nextQuestion() {
-    if (this.currentQuestionIndex < this.questions.length - 1) {
-      this.currentQuestionIndex++;
+  nextScenario() {
+    if (this.currentScenarioIndex < this.scenarios.length - 1) {
+      this.currentScenarioIndex++;
       this.selectedOptionId = null;
+      this.isAnswered = false; // Reset for next question
+    } else {
+      this.isGameOver = true;
     }
   }
 
-  prevQuestion() {
-    if (this.currentQuestionIndex > 0) {
-      this.currentQuestionIndex--;
-      this.selectedOptionId = null; // Or restore previous selection if tracked
+  get resultFeedback() {
+    const percentage = (this.score / this.scenarios.length) * 100;
+
+    if (percentage === 100) {
+      return {
+        emoji: '🏆',
+        title: 'مذهل! علامة كاملة!',
+        message: 'أنت خبير في التعامل مع الصرع. معلوماتك ممتازة وتساعد في إنقاذ الحياة.',
+        colorClass: 'text-yellow-500'
+      };
+    } else if (percentage >= 80) {
+      return {
+        emoji: '🌟',
+        title: 'عمل رائع!',
+        message: 'لديك وعي كبير ومعلومات قوية. أحسنت!',
+        colorClass: 'text-purple-500'
+      };
+    } else if (percentage >= 50) {
+      return {
+        emoji: '👍',
+        title: 'جيد جداً',
+        message: 'لديك معلومات أساسية جيدة، لكن يمكنك تعزيزها بالمزيد من القراءة.',
+        colorClass: 'text-blue-500'
+      };
+    } else {
+      return {
+        emoji: '📚',
+        title: 'تحتاج للمزيد من الاطلاع',
+        message: 'لا بأس، الصرع موضوع مهم وننصحك بمراجعة قسم "نصيحة اليوم" لزيادة معلوماتك.',
+        colorClass: 'text-slate-500'
+      };
     }
+  }
+
+  restartQuiz() {
+    this.currentScenarioIndex = 0;
+    this.selectedOptionId = null;
+    this.score = 0;
+    this.isGameOver = false;
+    this.isAnswered = false;
+    // Optionally re-shuffle on restart
+    this.quizService.getQuestions().subscribe(questions => {
+      this.scenarios = questions;
+    });
   }
 }

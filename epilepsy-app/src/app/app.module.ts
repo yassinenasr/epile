@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdviceComponent } from './components/advice/advice.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -22,6 +23,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     AdviceComponent,
     QuizComponent,
+    ChatbotComponent,
     HeaderComponent,
     FooterComponent
   ],
