@@ -11,12 +11,30 @@
             <div
                 class="hidden md:flex space-x-8 font-display text-sm font-semibold uppercase tracking-wider items-center">
                 <a routerLink="/" routerLinkActive="text-purple-200" [routerLinkActiveOptions]="{exact: true}"
-                    class="hover:text-purple-200 transition-colors">Home</a>
+                    class="hover:text-purple-200 transition-colors">{{ 'HEADER.HOME' | translate }}</a>
                 <a routerLink="/advice" routerLinkActive="text-purple-200"
-                    class="hover:text-purple-200 transition-colors">Advice & Resources</a>
+                    class="hover:text-purple-200 transition-colors">{{ 'HEADER.ADVICE' | translate }}</a>
                 <a routerLink="/quiz" routerLinkActive="text-purple-200"
-                    class="hover:text-purple-200 transition-colors">Quiz</a>
-                <a href="#" class="hover:text-purple-200 transition-colors">Contact</a>
+                    class="hover:text-purple-200 transition-colors">{{ 'HEADER.QUIZ' | translate }}</a>
+
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 hover:text-purple-200 transition-colors">
+                        <span class="material-symbols-outlined">language</span>
+                        <span>{{ currentLang | uppercase }}</span>
+                    </button>
+                    <div
+                        class="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                        <button (click)="switchLanguage('en')"
+                            class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 w-full text-left">English</button>
+                        <button (click)="switchLanguage('fr')"
+                            class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 w-full text-left">Français</button>
+                        <button (click)="switchLanguage('ar')"
+                            class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 w-full text-left">العربية</button>
+                        <button (click)="switchLanguage('tn')"
+                            class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 w-full text-left">Tounsi</button>
+                    </div>
+                </div>
+
                 <a href="#"
                     class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors text-xs font-bold">Se
                     Connecter</a>
@@ -35,13 +53,29 @@
     <div *ngIf="isMenuOpen" class="md:hidden bg-primary border-t border-white/10">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-display uppercase tracking-wider text-sm font-semibold">
             <a routerLink="/" (click)="isMenuOpen=false"
-                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Home</a>
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">{{ 'HEADER.HOME' | translate
+                }}</a>
             <a routerLink="/advice" (click)="isMenuOpen=false"
-                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Advice & Resources</a>
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">{{ 'HEADER.ADVICE' | translate
+                }}</a>
             <a routerLink="/quiz" (click)="isMenuOpen=false"
-                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Quiz</a>
-            <a href="#" (click)="isMenuOpen=false"
-                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">Contact</a>
+                class="block px-3 py-2 rounded-md hover:bg-white/10 transition-colors">{{ 'HEADER.QUIZ' | translate
+                }}</a>
+
+            <div class="border-t border-white/10 my-2 pt-2">
+                <p class="px-3 text-xs text-purple-200 mb-2">Language</p>
+                <div class="grid grid-cols-2 gap-2 px-3">
+                    <button (click)="switchLanguage('en'); isMenuOpen=false" [class.bg-white-20]="currentLang === 'en'"
+                        class="text-left px-2 py-1 rounded hover:bg-white/10 text-xs">English</button>
+                    <button (click)="switchLanguage('fr'); isMenuOpen=false" [class.bg-white-20]="currentLang === 'fr'"
+                        class="text-left px-2 py-1 rounded hover:bg-white/10 text-xs">Français</button>
+                    <button (click)="switchLanguage('ar'); isMenuOpen=false" [class.bg-white-20]="currentLang === 'ar'"
+                        class="text-left px-2 py-1 rounded hover:bg-white/10 text-xs">العربية</button>
+                    <button (click)="switchLanguage('tn'); isMenuOpen=false" [class.bg-white-20]="currentLang === 'tn'"
+                        class="text-left px-2 py-1 rounded hover:bg-white/10 text-xs">Tounsi</button>
+                </div>
+            </div>
+
             <a href="#" (click)="isMenuOpen=false"
                 class="block w-full text-left px-3 py-2 rounded-md hover:bg-white/10 transition-colors text-purple-200">Se
                 Connecter</a>

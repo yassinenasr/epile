@@ -1,0 +1,43 @@
+{
+    "HEADER": {
+        "TITLE": "Sensibilisation à l'Épilepsie",
+        "HOME": "Accueil",
+        "ADVICE": "Conseils et Ressources",
+        "QUIZ": "Quiz"
+    },
+    "BUTTONS": {
+        "READ_MORE": "En savoir plus",
+        "ABOUT": "À propos",
+        "SUBSCRIBE": "S'abonner"
+    },
+    "HOME": {
+        "WELCOME": "Bienvenue sur Sensibilisation à l'Épilepsie",
+        "DESCRIPTION": "Apprenez, comprenez et soutenez ceux qui vivent avec l'épilepsie.",
+        "START_JOURNEY": "Commencer l'apprentissage",
+        "FEATURE_1_TITLE": "Ressources Éducatives",
+        "FEATURE_1_DESC": "Accédez à des guides complets et des articles sur les types d'épilepsie, les déclencheurs et les traitements.",
+        "FEATURE_2_TITLE": "Guide de Premiers Secours",
+        "FEATURE_2_DESC": "Apprenez les gestes de premiers secours essentiels pour aider une personne pendant une crise.",
+        "FEATURE_3_TITLE": "Quiz Interactif",
+        "FEATURE_3_DESC": "Testez vos connaissances et dissipez les mythes courants sur l'épilepsie.",
+        "WHAT_IS_EPILEPSY_PT1": "Crises imprévisibles et répétées",
+        "WHAT_IS_EPILEPSY_PT2": "Troubles de l'humeur et fatigue",
+        "WHAT_IS_EPILEPSY_PT3": "Impact sur la mémoire et l'attention",
+        "TAG_CRISES": "CRISES",
+        "TAG_MOOD": "TROUBLES DE L'HUMEUR",
+        "TAG_MEMORY": "MÉMOIRE",
+        "EXPERTS_TITLE": "Paroles d'Experts...",
+        "EXPERT_1_QUOTE": "\"La chirurgie est sous-utilisée en épilepsie, alors qu'elle offre la meilleure chance de liberté de crises chez les patients résistants aux traitements médicamenteux.\"",
+        "EXPERT_2_QUOTE": "\"L'épilepsie ne se limite pas aux crises : elle affecte tous les aspects de la vie du patient. Les traitements doivent viser la qualité de vie, pas seulement le contrôle des crises.\"",
+        "RESEARCH_TITLE": "Cas de Recherche",
+        "RESEARCH_DESC": "Découvrez les dernières avancées cliniques et les études de cas sur les différents types de crises épileptiques.",
+        "CASE_1_TITLE": "Cas 01 : Épilepsie du Lobe Temporal",
+        "CASE_1_DESC": "\"Localiser pour mieux guérir.\" Ce cas illustre comment l'imagerie de pointe permet d'identifier une sclérose de l'hippocampe.",
+        "CASE_2_TITLE": "Cas 02 : Épilepsie Myoclonique Juvénile",
+        "CASE_2_DESC": "\"Comprendre les déclencheurs au quotidien.\" Focus sur les crises du réveil chez l'adolescent et la gestion du sommeil.",
+        "CASE_3_TITLE": "Cas 03 : Épilepsie Absence (Pédiatrie)",
+        "CASE_3_DESC": "\"Au-delà des apparences de l'inattention.\" Analyse des ruptures de contact brèves chez l'enfant et diagnostic EEG.",
+        "NEWSLETTER_TITLE": "Recevoir toutes les mises à jour...",
+        "NEWSLETTER_PLACEHOLDER": "VOTRE EMAIL"
+    }
+}

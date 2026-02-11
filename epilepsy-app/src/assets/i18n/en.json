@@ -1,0 +1,43 @@
+{
+    "HEADER": {
+        "TITLE": "Epilepsy Awareness",
+        "HOME": "Home",
+        "ADVICE": "Advice & Resources",
+        "QUIZ": "Quiz"
+    },
+    "BUTTONS": {
+        "READ_MORE": "Read More",
+        "ABOUT": "About",
+        "SUBSCRIBE": "Subscribe"
+    },
+    "HOME": {
+        "WELCOME": "Welcome to Epilepsy Awareness",
+        "DESCRIPTION": "Learn, understand, and support those living with epilepsy.",
+        "START_JOURNEY": "Start Learning",
+        "FEATURE_1_TITLE": "Educational Resources",
+        "FEATURE_1_DESC": "Access comprehensive guides and articles about epilepsy types, triggers, and treatments.",
+        "FEATURE_2_TITLE": "First Aid Guide",
+        "FEATURE_2_DESC": "Learn essential first aid steps to help someone during a seizure.",
+        "FEATURE_3_TITLE": "Interactive Quiz",
+        "FEATURE_3_DESC": "Test your knowledge and debunk common myths about epilepsy.",
+        "WHAT_IS_EPILEPSY_PT1": "Unpredictable and repeated seizures",
+        "WHAT_IS_EPILEPSY_PT2": "Mood disorders and fatigue",
+        "WHAT_IS_EPILEPSY_PT3": "Impact on memory and attention",
+        "TAG_CRISES": "SEIZURES",
+        "TAG_MOOD": "MOOD",
+        "TAG_MEMORY": "MEMORY",
+        "EXPERTS_TITLE": "Experts' Words...",
+        "EXPERT_1_QUOTE": "\"Surgery is underutilized in epilepsy, yet it offers the best chance of seizure freedom for patients resistant to drug treatments.\"",
+        "EXPERT_2_QUOTE": "\"Epilepsy is not limited to seizures: it affects all aspects of the patient's life. Treatments must aim for quality of life, not just seizure control.\"",
+        "RESEARCH_TITLE": "Research Cases",
+        "RESEARCH_DESC": "Discover the latest clinical advances and case studies on different types of epileptic seizures.",
+        "CASE_1_TITLE": "Case 01: Temporal Lobe Epilepsy",
+        "CASE_1_DESC": "\"Localize to heal better.\" This case illustrates how advanced imaging helps identify hippocampal sclerosis.",
+        "CASE_2_TITLE": "Case 02: Juvenile Myoclonic Epilepsy",
+        "CASE_2_DESC": "\"Understanding triggers in daily life.\" Focus on awakening seizures in adolescents and sleep management.",
+        "CASE_3_TITLE": "Case 03: Absence Epilepsy (Pediatric)",
+        "CASE_3_DESC": "\"Beyond the appearance of inattention.\" Analysis of brief contact breaks in children and EEG diagnosis.",
+        "NEWSLETTER_TITLE": "Receive all updates...",
+        "NEWSLETTER_PLACEHOLDER": "YOUR EMAIL"
+    }
+}

@@ -4,15 +4,16 @@
         <div class="z-10 text-center md:text-left">
             <h1
                 class="font-display text-5xl md:text-7xl font-extrabold text-primary dark:text-purple-300 leading-tight mb-6">
-                Soigner tôt<br>L'Épilepsie
+                {{ 'HOME.WELCOME' | translate }}
             </h1>
+            <p class="text-lg mb-6">{{ 'HOME.DESCRIPTION' | translate }}</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <button routerLink="/advice"
-                    class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">En
-                    savoir plus</button>
+                    class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">{{
+                    'HOME.START_JOURNEY' | translate }}</button>
                 <button
-                    class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">À
-                    propos</button>
+                    class="bg-white text-primary px-8 py-3 rounded shadow-lg font-bold uppercase tracking-wider hover:bg-slate-50 transition-all border border-primary/20">{{
+                    'BUTTONS.ABOUT' | translate }}</button>
             </div>
         </div>
 
@@ -44,14 +45,13 @@
             <div class="md:w-3/5">
                 <h2
                     class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-tight">
-                    À Propos de l'Épileptologie</h2>
+                    {{ 'HOME.FEATURE_1_TITLE' | translate }}</h2>
                 <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-lg">
-                    L'épileptologie est la branche de la neurologie qui se consacre au diagnostic et au traitement de
-                    l'épilepsie. Elle explore les mystères du cerveau pour offrir une vie meilleure aux patients.
+                    {{ 'HOME.FEATURE_1_DESC' | translate }}
                 </p>
                 <button routerLink="/advice"
-                    class="bg-primary text-white px-8 py-3 rounded font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">En
-                    savoir plus</button>
+                    class="bg-white/10 dark:bg-white/5 border border-white/20 px-8 py-3 rounded font-bold uppercase tracking-wider hover:bg-white/20 transition-all">{{
+                    'BUTTONS.READ_MORE' | translate }}</button>
             </div>
             <div class="md:w-2/5">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg-A_uFfpAfgROjlWLVSaD1GdS0_DqZL2ZeVDR_abFI4uDjTI1G2Aafa-PiWmLzCgRI3f_fdyKuyS_A12oeB9YTCT99rM_n76aDQGMw8c5UTrayh9d00Od6_Sf6xj3GAVhuQMrtR7eX5jYkYBwfbi5KHoxIS3_vEvvrRjqLaFRzA5323dtR6mIVmVzoqsE9loI7ApqUGfgbazjjU7qBPFlJ9a7NfX5161TvL_thh6krettiFC2gT4bVh7abRCo1VjFVpWYMdDf2wZQ"
@@ -64,28 +64,30 @@
             <div class="md:w-1/2">
                 <h2
                     class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-tight">
-                    Qu'est-ce que l'Épilepsie ?</h2>
+                    {{ 'HOME.FEATURE_2_TITLE' | translate }}</h2>
                 <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-lg">
-                    L'épilepsie est une affection neurologique caractérisée par des décharges électriques excessives
-                    dans les cellules cérébrales. Elle peut toucher n'importe qui, à tout âge.
+                    {{ 'HOME.FEATURE_2_DESC' | translate }}
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-4">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">Crises imprévisibles et répétées</span>
+                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT1' | translate
+                            }}</span>
                     </div>
                     <div class="flex items-start gap-4">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">Troubles de l'humeur et fatigue</span>
+                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT2' | translate
+                            }}</span>
                     </div>
                     <div class="flex items-start gap-4">
                         <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="text-slate-700 dark:text-slate-300">Impact sur la mémoire et l'attention</span>
+                        <span class="text-slate-700 dark:text-slate-300">{{ 'HOME.WHAT_IS_EPILEPSY_PT3' | translate
+                            }}</span>
                     </div>
                 </div>
                 <button routerLink="/advice"
-                    class="bg-primary text-white px-8 py-3 rounded font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">En
-                    savoir plus</button>
+                    class="bg-white/10 dark:bg-white/5 border border-white/20 px-8 py-3 rounded font-bold uppercase tracking-wider hover:bg-white/20 transition-all">{{
+                    'BUTTONS.READ_MORE' | translate }}</button>
             </div>
             <div class="md:w-1/2">
                 <div
@@ -95,13 +97,13 @@
                     <!-- Floating Tags -->
                     <div
                         class="absolute top-4 right-1/4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        CRISES</div>
+                        {{ 'HOME.TAG_CRISES' | translate }}</div>
                     <div
                         class="absolute bottom-1/4 -left-4 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        TROUBLES DE L'HUMEUR</div>
+                        {{ 'HOME.TAG_MOOD' | translate }}</div>
                     <div
                         class="absolute bottom-12 right-0 bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded text-xs font-bold shadow">
-                        MÉMOIRE</div>
+                        {{ 'HOME.TAG_MEMORY' | translate }}</div>
                 </div>
             </div>
         </div>
@@ -112,7 +114,7 @@
 <section class="py-20 bg-slate-50 dark:bg-slate-900/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-16 uppercase tracking-widest">
-            Paroles d'Experts..</h2>
+            {{ 'HOME.EXPERTS_TITLE' | translate }}</h2>
         <div class="grid md:grid-cols-2 gap-12 items-end">
             <!-- Expert 1 -->
             <div class="bg-white dark:bg-slate-800 p-8 pt-0 rounded-3xl expert-card-shadow relative mt-20">
@@ -123,8 +125,7 @@
                 </div>
                 <h3 class="font-display font-bold text-xl mb-4">DR. JEROME ENGEL JR</h3>
                 <p class="text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed">
-                    "La chirurgie est sous-utilisée en épilepsie, alors qu'elle offre la meilleure chance de liberté de
-                    crises chez les patients résistants aux traitements médicamenteux."
+                    {{ 'HOME.EXPERT_1_QUOTE' | translate }}
                 </p>
                 <span class="material-symbols-outlined text-4xl text-primary opacity-30">format_quote</span>
             </div>
@@ -138,8 +139,7 @@
                 </div>
                 <h3 class="font-display font-bold text-2xl mb-6">DR. JACQUELINE A. FRENCH</h3>
                 <p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed text-lg">
-                    "L'épilepsie ne se limite pas aux crises : elle affecte tous les aspects de la vie du patient. Les
-                    traitements doivent viser la qualité de vie, pas seulement le contrôle des crises."
+                    {{ 'HOME.EXPERT_2_QUOTE' | translate }}
                 </p>
                 <span class="material-symbols-outlined text-5xl text-primary opacity-30">format_quote</span>
             </div>
@@ -151,9 +151,8 @@
 <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="font-display text-4xl font-extrabold text-slate-900 dark:text-white mb-2 uppercase tracking-widest">
-            Cas de Recherche</h2>
-        <p class="text-slate-500 mb-16">Découvrez les dernières avancées cliniques et les études de cas sur les
-            différents types de crises épileptiques.</p>
+            {{ 'HOME.RESEARCH_TITLE' | translate }}</h2>
+        <p class="text-slate-500 mb-16">{{ 'HOME.RESEARCH_DESC' | translate }}</p>
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Case 1 -->
             <div
@@ -164,13 +163,12 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la
-                            suite</button>
+                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
+                            'BUTTONS.READ_MORE' | translate }}</button>
                     </div>
                 </div>
-                <h3 class="font-display font-bold text-xl mb-3">Cas 01 : Épilepsie du Lobe Temporal</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Localiser pour mieux guérir." Ce cas
-                    illustre comment l'imagerie de pointe permet d'identifier une sclérose de l'hippocampe.</p>
+                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_1_TITLE' | translate }}</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_1_DESC' | translate }}</p>
                 <div class="w-full flex justify-center">
                     <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
                 </div>
@@ -184,13 +182,12 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la
-                            suite</button>
+                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
+                            'BUTTONS.READ_MORE' | translate }}</button>
                     </div>
                 </div>
-                <h3 class="font-display font-bold text-xl mb-3">Cas 02 : Épilepsie Myoclonique Juvénile</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Comprendre les déclencheurs au quotidien."
-                    Focus sur les crises du réveil chez l'adolescent et la gestion du sommeil.</p>
+                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_2_TITLE' | translate }}</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_2_DESC' | translate }}</p>
                 <div class="w-full flex justify-center">
                     <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
                 </div>
@@ -204,13 +201,13 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">Lire la
-                            suite</button>
+                        <button class="bg-primary text-white px-6 py-2 rounded text-xs font-bold uppercase">{{
+                            'BUTTONS.READ_MORE' | translate }}</button>
                     </div>
                 </div>
-                <h3 class="font-display font-bold text-xl mb-3">Cas 03 : Épilepsie Absence (Pédiatrie)</h3>
-                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">"Au-delà des apparences de l'inattention."
-                    Analyse des ruptures de contact brèves chez l'enfant et diagnostic EEG.</p>
+                <!-- Expert 3 (fixed) -->
+                <h3 class="font-display font-bold text-xl mb-3">{{ 'HOME.CASE_3_TITLE' | translate }}</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">{{ 'HOME.CASE_3_DESC' | translate }}</p>
                 <div class="w-full flex justify-center">
                     <div class="w-8 h-8 rotate-45 bg-primary/10"></div>
                 </div>
@@ -229,13 +226,14 @@
             alt="Abstract brain background" class="w-full h-full object-cover mix-blend-overlay">
     </div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 class="font-display text-4xl font-extrabold text-white mb-12 uppercase tracking-widest">Recevoir toutes les
-            mises à jour....</h2>
+        <h2 class="font-display text-4xl font-extrabold text-white mb-12 uppercase tracking-widest">{{
+            'HOME.NEWSLETTER_TITLE' | translate }}</h2>
         <div class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
-            <input type="email" placeholder="VOTRE EMAIL"
+            <input type="email" placeholder="{{ 'HOME.NEWSLETTER_PLACEHOLDER' | translate }}"
                 class="flex-1 bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white rounded-lg px-6 py-4">
             <button
-                class="bg-white text-primary px-10 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">S'abonner</button>
+                class="bg-white text-primary px-10 py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">{{
+                'BUTTONS.SUBSCRIBE' | translate }}</button>
         </div>
     </div>
 </section>
