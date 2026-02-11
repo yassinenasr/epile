@@ -36,14 +36,10 @@
             <div class="grid gap-4 mb-12">
                 <button *ngFor="let option of currentQuestion.options" (click)="selectOption(option.id)"
                     class="option-card group flex items-center p-5 rounded-xl border-2 text-left transition-all"
-                    [class.border-primary]="selectedOptionId === option.id"
-                    [class.bg-purple-50]="selectedOptionId === option.id"
-                    [class.dark:bg-primary/10]="selectedOptionId === option.id"
-                    [class.border-slate-200]="selectedOptionId !== option.id"
-                    [class.dark:border-slate-700]="selectedOptionId !== option.id"
-                    [class.bg-white]="selectedOptionId !== option.id"
-                    [class.dark:bg-slate-800]="selectedOptionId !== option.id" [class.hover:border-primary]="true"
-                    [class.dark:hover:border-primary]="true">
+                    [ngClass]="{
+                        'border-primary bg-purple-50 dark:bg-primary/10': selectedOptionId === option.id,
+                        'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary dark:hover:border-primary': selectedOptionId !== option.id
+                    }">
 
                     <span
                         class="flex-shrink-0 w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold mr-4 transition-colors"
